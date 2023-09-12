@@ -1,3 +1,22 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:96083fc0ba8618b166fe9eaa729d7e4d9f394683b097ae0a1e075a51b4027e97
-size 408
+package com.ntt.wannabee.domain.account.dto;
+
+import com.ntt.wannabee.domain.account.entity.FinAccountStatus;
+import com.ntt.wannabee.domain.account.entity.FinAccountType;
+
+import lombok.Builder;
+import lombok.Getter;
+import lombok.Setter;
+
+@Builder
+@Getter
+@Setter
+public class FinAccountDto {
+
+	private Long idx;
+
+	private String number;
+
+	private FinAccountStatus status;
+
+	private FinAccountType type;
+}

@@ -1,28 +1,3 @@
-package com.ntt.wannabee.domain.member.model.dto;
-
-import com.ntt.wannabee.domain.member.model.vo.MemberRole;
-import com.ntt.wannabee.domain.member.model.vo.SocialProvider;
-
-import lombok.Data;
-import lombok.experimental.SuperBuilder;
-
-@Data
-@SuperBuilder
-public class MemberDto {
-
-	private Long idx;
-
-	private String uuid;
-
-	private byte status;
-
-	private String name;
-
-	private String nickname;
-
-	private MemberRole memberRole;
-
-	private SocialProvider socialProvider;
-
-	private String socialId;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:2e6e5f3906baf669655f73e89133db31f2e32a1ae8b69579078b3bc3abf8aff0
+size 529

@@ -1,9 +1,3 @@
-package com.ntt.wannabee.domain.member.repository;
-
-import org.springframework.data.jpa.repository.JpaRepository;
-
-import com.ntt.wannabee.domain.member.entity.Member;
-
-public interface MemberRepository extends JpaRepository<Member, Long>, MemberRepositoryCustom {
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ab96c5dd0041b0dfb129637e069ba1b191c179b62ef99ab7ba8144f926494aca
+size 268

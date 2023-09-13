@@ -1,22 +1,3 @@
-package com.ntt.wannabee.domain.quiz.entity;
-
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
-import lombok.AccessLevel;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-
-@Entity
-@Getter
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
-@Table(name = "quiz")
-public class Quiz {
-
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e0c69c55b781b203ebc53cd5908c909a987e8091bcf8471ad0f245aaaac68b9c
+size 1552

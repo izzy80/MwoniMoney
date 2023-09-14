@@ -1,3 +1,5 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:842db3e7a11ad729bba1e22ea0785a02b435ae2d9da192392b42a07798e6ef44
-size 210
+docker compose -f docker-compose-prod.yml pull
+
+COMPOSE_DOCKER_CLI_BUILD=1 DOCKER_BUILDKIT=1 docker compose -f docker-compose-prod.yml up --build -d
+
+docker rmi -f $(docker images -f "dangling=true" -q) || true

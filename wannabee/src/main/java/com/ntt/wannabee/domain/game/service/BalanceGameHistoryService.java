@@ -1,14 +1,3 @@
-package com.ntt.wannabee.domain.game.service;
-
-import org.springframework.stereotype.Service;
-
-import com.ntt.wannabee.domain.game.repository.BalanceGameHistoryRepository;
-
-import lombok.RequiredArgsConstructor;
-
-@Service
-@RequiredArgsConstructor
-public class BalanceGameHistoryService {
-
-	private final BalanceGameHistoryRepository balanceGameHistoryRepository;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f723bdecff3b6418f9a4409e486a54ff7235cdf9cf071250af066c667e1353ce
+size 1244

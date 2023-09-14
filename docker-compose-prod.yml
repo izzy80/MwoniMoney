@@ -1,26 +1,3 @@
-version: "3"
-
-services:
-  backend:
-    container_name: backend
-    build:
-      context: ./wannabee
-      args:
-        SERVER_MODE: prod
-  # frontend:
-  #   container_name: frontend
-  #   build:
-  #     context: ./frontend-web
-  #   depends_on:
-  #     - backend
-  nginx:
-    restart: always
-    container_name: nginx
-    build: 
-      context: ./nginx
-    depends_on:
-      - backend
-      # - frontend
-    ports:
-      - "80:80"
-      - "443:443"
+version https://git-lfs.github.com/spec/v1
+oid sha256:d98c2ab810bd0e0b83fff97f784c114706e2feff576ea660890de5fc905388e9
+size 440

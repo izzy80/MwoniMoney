@@ -1,3 +1,25 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:de0d417cfa7ba3743e862b2ad4df7e5401de6bed75a72ab491c2d3cf15ae4a7c
-size 454
+version: "3"
+
+services:
+  # backend:
+  #   container_name: backend
+  #   build:
+  #     context: ./backend
+  #     args:
+  #       SERVER_MODE: prod
+  # frontend:
+  #   container_name: frontend
+  #   build:
+  #     context: ./frontend-web
+  #   depends_on:
+  #     - backend
+  nginx:
+    # restart: always
+    container_name: nginx
+    image : nginx:latest
+    depends_on:
+      # - backend
+      # - frontend
+    ports:
+      - "80:80"
+      - "443:443"

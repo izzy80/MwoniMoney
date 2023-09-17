@@ -1,19 +1,3 @@
-import React from "react";
-import { Routes, Route } from "react-router-dom";
-import Main from "./Main";
-import StartPage1 from "../src/pages/StartPage/StartPage1";
-import { GlobalStyles } from "./Styles/GlobalStyle";
-
-function App() {
-  return (
-    <>
-      <GlobalStyles />
-      <Routes>
-        <Route path="/" element={<Main />} />
-        <Route path="/StartPage1" element={<StartPage1 />} />
-      </Routes>
-    </>
-  );
-}
-
-export default App;
+version https://git-lfs.github.com/spec/v1
+oid sha256:387209b15b6b609e8721d285dc08ec1c97fd71e637b5582c22bebb112312485a
+size 606

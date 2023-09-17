@@ -1,19 +1,3 @@
-import { createGlobalStyle } from "styled-components";
-import { reset } from "styled-reset";
-import background from "../../public/images/StartPage/background.jpg";
-
-export default createGlobalStyle`
-    ${reset}
-    body{
-        font-family: "Font_test"; 
-        position: absolute;
-        margin:0;
-        padding:0;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: url(${background});
-        background-size: cover;
-    }
-`;
+version https://git-lfs.github.com/spec/v1
+oid sha256:60a13bf09a798e6b2f1a56cb68e89662cf16b0757033b5e45353583c933e14ff
+size 524

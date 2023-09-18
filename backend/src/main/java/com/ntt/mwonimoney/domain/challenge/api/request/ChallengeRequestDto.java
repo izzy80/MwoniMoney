@@ -1,22 +1,3 @@
-package com.ntt.mwonimoney.domain.challenge.api.request;
-
-import java.time.LocalDateTime;
-
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-
-@Getter
-@NoArgsConstructor
-public class ChallengeRequestDto {
-	private String childUuid;
-
-	//challenge내용
-	private String title;
-	private String category;
-
-	//challengeMember내용
-	private String memo;
-	private int reward;
-	private int status;
-	private LocalDateTime endTime;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a43fb1e3b5445571222d531e665b247e1867514938dc7c9732292230aebeeb8f
+size 429

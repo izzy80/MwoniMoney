@@ -1,8 +1,3 @@
-package com.ntt.mwonimoney.domain.challenge.repository;
-
-import org.springframework.data.jpa.repository.JpaRepository;
-
-import com.ntt.mwonimoney.domain.challenge.entity.MemberChallenge;
-
-public interface MemberChallengeRepository extends JpaRepository<MemberChallenge, Long> {
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:bc50e34e607fb2d7098a28f5144b21f2c76d8c7504578d05a10eaab3abb57aff
+size 735

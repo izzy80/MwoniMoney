@@ -1,20 +1,3 @@
-import React from "react";
-import styled from "styled-components";
-
-const HeaderBody = styled.div`
-  border: 1px solid black;
-  position: fixed;
-  top: 0;
-  width: 100vw;
-  height: 10vh;
-  background-color: white;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-`;
-
-function Header() {
-  return <HeaderBody></HeaderBody>;
-}
-
-export default Header;
+version https://git-lfs.github.com/spec/v1
+oid sha256:dbb6e3b7167181964609be95d091a0d9713a4f69dbf59fa7a14de9668415b6d4
+size 1756

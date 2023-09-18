@@ -1,14 +1,3 @@
-package com.ntt.mwonimoney.global.common.entity;
-
-import java.time.LocalDateTime;
-
-import jakarta.persistence.Column;
-import jakarta.persistence.MappedSuperclass;
-import lombok.experimental.SuperBuilder;
-
-@MappedSuperclass
-public abstract class CommonEntity {
-
-	@Column(name = "create_time")
-	private LocalDateTime createTime;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:01187188c07d056e07e6e880e70d4ce4729932fbb8d64d281b08325ee43d304a
+size 329

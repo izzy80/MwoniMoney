@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:35ec6cc61582f5d149d866e976bd40e0f0c1b9f46b256632d442902e1e5af4c7
-size 488
+import { createGlobalStyle } from "styled-components";
+import { reset } from "styled-reset";
+import background from "../assests/image/background.png";
+
+export const GlobalStyles = createGlobalStyle`
+    ${reset}
+    body{
+        // font-family: "Font_test"; 
+        position: absolute;
+        margin:0;
+        padding:0;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-Image: url(${background});
+        background-size: cover;
+    }
+`;

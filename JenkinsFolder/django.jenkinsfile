@@ -1,20 +1,3 @@
-pipeline {
-    agent any
-    
-    environment {
-        CONTAINER_NAME = "mwonimoney-admin-container"
-        IMAGE_NAME = "mwonimoney-admin-image"
-    }
-
-    stages {
-        stage('Checkout') {
-            steps {
-                //Jenkins의 SCM (소스 코드 관리) 플러그인을 사용하여 Git 저장소로부터 소스 코드를 가져오는 역할
-                checkout scm
-                sh 'echo "git clone완료"'
-            }
-        }
-    }
-
-}
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:2218e8456b202fb57e53469ebba0060c5bc13ca74a9708f5d492dabff9d5cc50
+size 2158

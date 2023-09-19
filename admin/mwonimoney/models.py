@@ -1,3 +1,11 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:8f8b9392c083e3534d2c26fbc0fa4a23c7a78348d34819e43820a9f3788534cf
-size 271
+from django.db import models
+
+class Test(models.Model):
+    id = models.AutoField(primary_key=True)
+    name = models.CharField(max_length=2)
+    def __str__(self):
+        return str(self.id)+self.name
+
+    class Meta:
+        db_table = 'test'
+        # managed = False

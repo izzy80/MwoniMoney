@@ -1,3 +1,20 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:cc02ed4867e4950349e63e42ec379726cb79da7c3dcf775f61d75cb8ae7c428d
-size 405
+package com.ntt.mwonimoney.domain.member.model.dto;
+
+import com.ntt.mwonimoney.domain.member.model.vo.SmallAccount;
+
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.experimental.SuperBuilder;
+
+@Data
+@EqualsAndHashCode(callSuper = true)
+@SuperBuilder
+public class ChildDto extends MemberDto {
+
+	private byte creditScore;
+
+	private int quizReward;
+
+	private SmallAccount smallAccount;
+
+}

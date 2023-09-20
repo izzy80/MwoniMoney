@@ -1,18 +1,3 @@
-import styled from "styled-components";
-
-interface ContainerProps {
-  height: string;
-  flexDirection?: string | null;
-}
-
-export const Container = styled.div<ContainerProps>`
-  border: 1px solid black;
-  height: ${(props) => props.height}; /* props.height 값을 스타일에 적용 */
-  width: 100%;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: ${(props) =>
-    props.flexDirection ? props.flexDirection : "row"};
-  justify-content: center;
-  align-items: center;
-`;
+version https://git-lfs.github.com/spec/v1
+oid sha256:d22491c54c9897f13a8386b0edc8a07ab5bf49d93ca8c6e40e060f9268c8ef1c
+size 796

@@ -1,3 +1,11 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:8b5643b2a10499d145d470c6e0cc46eb9eb4e394997555a0140345c1765e35d4
-size 307
+import React from "react";
+import ChildrenLayout from "./childrenLayout";
+import ParentsLayout from "./parentsLayout";
+
+function Layout() {
+  //number = 1 : 부모 , number = 0 : 자식
+  const role: number = 1;
+  return <>{role === 1 ? <ParentsLayout /> : <ChildrenLayout />}</>;
+}
+
+export default Layout;

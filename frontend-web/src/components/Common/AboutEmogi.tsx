@@ -1,16 +1,3 @@
-import styled from "styled-components";
-
-interface EmogiBoxProps {
-  width?: string;
-  height?: string;
-  backImg: string;
-}
-
-export const EmogiBox = styled.div<EmogiBoxProps>`
-  // border: 1px solid red;
-  box-sizing: border-box;
-  width: ${(props) => (props.width ? props.width : "80%")};
-  height: ${(props) => (props.height ? props.height : "80%")};
-  background-image: url(${(props) => props.backImg});
-  background-size: 100% 100%;
-`;
+version https://git-lfs.github.com/spec/v1
+oid sha256:54f975667ed432ca14f74570525cf482a06b19921a993bc938e8ffaa316b3dad
+size 441

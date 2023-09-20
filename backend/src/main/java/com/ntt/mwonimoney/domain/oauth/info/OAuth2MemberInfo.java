@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4ce29656c35c2aec45f65cf9cb09e9c60a689b36010e4b62c679e81c46aa56e7
-size 461
+package com.ntt.mwonimoney.domain.oauth.info;
+
+import java.time.LocalDate;
+import java.util.Map;
+
+public abstract class OAuth2MemberInfo {
+
+	protected Map<String, Object> attributes;
+
+	public OAuth2MemberInfo(Map<String, Object> attributes) {
+		this.attributes = attributes;
+	}
+
+	public Map<String, Object> getAttributes() {
+		return attributes;
+	}
+
+	public abstract String getId();
+
+	public abstract String getName();
+
+	public abstract String getBirthday();
+
+}

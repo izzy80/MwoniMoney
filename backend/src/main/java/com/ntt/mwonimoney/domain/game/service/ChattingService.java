@@ -1,12 +1,3 @@
-package com.ntt.mwonimoney.domain.game.service;
-
-import com.ntt.mwonimoney.domain.game.entity.Chat;
-
-import reactor.core.publisher.Flux;
-import reactor.core.publisher.Mono;
-
-public interface ChattingService {
-	Flux<Chat> getBalanceGameChattingHistory(Long balanceGameIdx);
-
-	Mono<Chat> addChat(Chat chat, String memberUUID, Long balanceGameIdx);
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e48b67d3e1c94cc835d22f7d43015ae20a01c62e322924903b2326b2a7f96ed9
+size 348

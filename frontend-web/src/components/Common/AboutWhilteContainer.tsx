@@ -1,15 +1,3 @@
-import styled from "styled-components";
-
-interface WhiteBoxProps {
-  height?: string | null;
-}
-
-export const WhiteBox1 = styled.div<WhiteBoxProps>`
-  // border: 1px solid black;
-  box-sizing: border-box;
-  background-color: #ffffff;
-  border-radius: 8px;
-  width: 90%;
-  height: ${(props) => (props.height ? props.height : "80%")};
-  display: flex;
-`;
+version https://git-lfs.github.com/spec/v1
+oid sha256:e5e79ac66ca6eae6ec864542475a053969a7982eba67c2559fb4c3ddf3db78d0
+size 688

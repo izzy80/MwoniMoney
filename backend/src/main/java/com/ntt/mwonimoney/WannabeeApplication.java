@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:19edd7e0464f08ff3b5a1db4c2465a21e9197770600029b0b35401330a5824bb
-size 492
+package com.ntt.mwonimoney;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
+import org.springframework.scheduling.annotation.EnableScheduling;
+
+@EnableJpaAuditing
+@EnableScheduling
+@SpringBootApplication
+public class WannabeeApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(WannabeeApplication.class, args);
+	}
+
+}

@@ -1,21 +1,3 @@
-package com.ntt.mwonimoney.domain.challenge.model.dto;
-
-import java.time.LocalDateTime;
-
-import lombok.Data;
-
-@Data
-public class MemberChallengeDto {
-
-	private String memo;
-	private int reward;
-	private int status;
-	private LocalDateTime endTime;
-
-	public MemberChallengeDto(String memo, int reward, int status, LocalDateTime endTime) {
-		this.memo = memo;
-		this.reward = reward;
-		this.status = status;
-		this.endTime = endTime;
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e3b0855739e93e3b12cda5fedc61e27c6f998d53377e562f2d7e4292d4dd151b
+size 436

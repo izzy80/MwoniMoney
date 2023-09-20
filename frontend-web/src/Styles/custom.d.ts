@@ -1,3 +1,25 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b7d4fccb97aaa1c5bdbf103f319bcb144b5bea684f009f06d6c2376438155dc8
-size 384
+// custom.d.ts
+
+// PNG 이미지
+declare module "*.png" {
+  const value: string;
+  export default value;
+}
+
+// JPEG 이미지
+declare module "*.jpg" {
+  const value: string;
+  export default value;
+}
+
+// GIF 이미지
+declare module "*.gif" {
+  const value: string;
+  export default value;
+}
+
+// SVG 이미지
+declare module "*.svg" {
+  const value: string;
+  export default value;
+}

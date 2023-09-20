@@ -1,3 +1,21 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c8a2dca86e73d0cc44555de6635ba8a143b6135a4d6fdb5761d863397e1ab55f
-size 471
+package com.ntt.mwonimoney.global.config;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+import com.querydsl.jpa.impl.JPAQueryFactory;
+
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.PersistenceContext;
+
+@Configuration
+public class QueryDSLConfig {
+
+	@PersistenceContext
+	EntityManager em;
+
+	@Bean
+	public JPAQueryFactory jpaQueryFactory() {
+		return new JPAQueryFactory(em);
+	}
+}

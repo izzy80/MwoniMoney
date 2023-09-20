@@ -1,17 +1,3 @@
-package com.ntt.mwonimoney.global.common.entity;
-
-import lombok.Builder;
-
-public class BaseResponseDto {
-	private boolean success;
-	private String message;
-	private Object data;
-
-	@Builder
-	public BaseResponseDto(boolean success, String message, Object data) {
-		this.success = success;
-		this.message = message;
-		this.data = data;
-	}
-}
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:c76e73afcc0ed22a7713d192cb93ed0239bec0f374de89e9b3fc3b2e9387be9e
+size 339

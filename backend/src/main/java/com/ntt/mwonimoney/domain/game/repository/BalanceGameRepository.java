@@ -1,12 +1,3 @@
-package com.ntt.mwonimoney.domain.game.repository;
-
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Slice;
-import org.springframework.data.jpa.repository.JpaRepository;
-
-import com.ntt.mwonimoney.domain.game.entity.BalanceGame;
-
-public interface BalanceGameRepository extends JpaRepository<BalanceGame, Long> {
-
-	Slice<BalanceGame> findBalanceGamesBy(Pageable pageable);
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f29286d197a37d82bcca7ee5f92b5d1286a7cf540595e0c79a1703d4aff6af76
+size 794

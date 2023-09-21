@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:34d2f79bbc520268afc4a73138af9d84bf92a60bb2e7dad8c0e706d1e994828f
-size 671
+package com.ntt.mwonimoney.domain.game.service;
+
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Slice;
+
+import com.ntt.mwonimoney.domain.game.model.dto.BalanceGameDto;
+
+public interface BalanceGameService {
+
+	Slice<BalanceGameDto> getBalanceGames(Pageable pageable);
+
+	// public BalanceGameDto getTodayBalanceGame() {
+	//
+	// }
+
+	BalanceGameDto getBalanceGameInfo(Long balanceGameIdx);
+}

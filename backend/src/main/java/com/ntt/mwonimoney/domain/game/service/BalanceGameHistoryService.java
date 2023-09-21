@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ae985d88e703055b70eab2b31460aa254f3cccce6f41763f5860d4255a9bfdb5
-size 434
+package com.ntt.mwonimoney.domain.game.service;
+
+import java.util.List;
+
+import com.ntt.mwonimoney.domain.game.model.dto.BalanceGameHistoryDto;
+import com.ntt.mwonimoney.domain.game.model.vo.BalanceGameAnswer;
+
+public interface BalanceGameHistoryService {
+	List<BalanceGameHistoryDto> getUserBalanceGameHistories(Long memberIdx);
+
+	void selectBalanceGameAnswer(Long balanceGameIdx, Long MemberIdx, BalanceGameAnswer selectAnswer);
+
+}

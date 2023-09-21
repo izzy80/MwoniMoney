@@ -1,19 +1,3 @@
-package com.ntt.mwonimoney.domain.game.model.dto;
-
-import lombok.Builder;
-import lombok.Data;
-
-@Data
-@Builder
-public class BalanceGameDto {
-
-	Long idx;
-
-	String question;
-
-	String answer1;
-
-	String answer2;
-
-	char active;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:7dbc761ec92cfcc6f59fc4265477077b501f311ddcec4547b6a923a071df0a39
+size 364

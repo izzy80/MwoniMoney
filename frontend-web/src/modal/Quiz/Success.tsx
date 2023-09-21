@@ -1,16 +1,3 @@
-import * as React from "react";
-import ModalBody from "../ModalBtn1";
-import ChallengeList from "../../components/Parents/Challenge/ChallengeList";
-
-export default function BasicModal() {
-  return (
-    <div>
-      <ModalBody
-        modal_start_text="모달띄우는 버튼에 적을 말"
-        modal_title="모달 제목"
-        modal_content={<ChallengeList />} /**테그 넣는 방법*/
-        modal_btn="모달 닫는 버튼"
-      />
-    </div>
-  );
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:49b8c995a16fd4f707c76d91353565c32f27b7746d11720a3bc85b2aa21bb0fc
+size 3407

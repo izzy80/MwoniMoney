@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:fa4db7d8f41287c8ac8955d1fbd84e3cdc5f8165ad5bcb554aa3358e256c6985
-size 873
+import * as React from "react";
+import Button from "@mui/material/Button";
+import Modal from "@mui/material/Modal";
+import ModalBody from "../ModalBack";
+
+export default function BasicModal() {
+  return (
+    <div>
+      <ModalBody
+        modal_start_text="모달띄우는 버튼에 적을 말"
+        modal_title="모달 제목"
+        modal_content="모달 내용"
+        modal_btn="모달 닫는 버튼"
+      />
+    </div>
+  );
+}

@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:470442bf1094d9da4793463523182d09319ab90ed172f63e16b274e6976d484f
-size 695
+package com.ntt.mwonimoney.domain.member.repository;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.ntt.mwonimoney.domain.member.entity.Children;
+import com.ntt.mwonimoney.domain.member.entity.ChildrenKey;
+
+
+public interface ChildrenRepository extends JpaRepository<Children, ChildrenKey> , CustomChildrenRepository{
+
+	Optional<Children> findChildrenByChildrenKey(ChildrenKey childrenKey);
+
+}

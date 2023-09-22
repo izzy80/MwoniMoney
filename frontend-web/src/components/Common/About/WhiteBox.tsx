@@ -1,12 +1,3 @@
-import styled from "styled-components";
-
-export const WhiteBox = styled.div`
-  // border: 1px solid black;
-  border-radius: 8px;
-  width: 90%;
-  height: 90%;
-  background-color: #ffffff;
-  // margin-bottom: 5%;
-  padding-top: 5%;
-  box-sizing: border-box;
-`;
+version https://git-lfs.github.com/spec/v1
+oid sha256:355fffd39d2444d0b7f7008a1a093a43b8a46b2d7c6a3eef03b30de22d00a37a
+size 259

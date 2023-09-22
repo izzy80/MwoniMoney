@@ -1,3 +1,6 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:717bd990dc66e2d4ec6d4e9dbb9ec6d0a42df26a34c28d821e00f051ef697c16
-size 177
+spring:
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://j9b310.p.ssafy.io:50000/wannabedb
+    username: wannabe
+    password: i9b310p_kplyjc

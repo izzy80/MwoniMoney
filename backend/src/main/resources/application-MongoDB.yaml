@@ -1,3 +1,10 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:283ca3dfce38ce71e47a0be8f382758a45aded2a41620c2d7f94a93087ce5156
-size 295
+spring:
+  datasource:
+    mongodb:
+      host: j9b310.p.ssafy.io
+      port: 27017
+      authentication-database: mwonimoney
+      username: ssafy-b310
+      password: j9b310p_kplyjc
+      database: mwonimoney
+      uri: mongodb://ssafy-b310:j9b310p_kplyjc@ j9b310p_kplyjc/?authMechanism=DEFAULT

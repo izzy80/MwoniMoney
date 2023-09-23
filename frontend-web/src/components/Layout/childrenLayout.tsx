@@ -1,20 +1,3 @@
-import React from "react";
-import Footer from "./footer";
-import Header from "./header";
-import { Outlet } from "react-router-dom";
-
-function ChildrenLayout() {
-  return (
-    <>
-      {/* <Header /> */}
-      <div>자식 헤더</div>
-      <div style={{ height: "80vh", paddingTop: "10vh" }}>
-        <Outlet />
-      </div>
-      <div>자식 푸터</div>
-      {/* <Footer /> */}
-    </>
-  );
-}
-
-export default ChildrenLayout;
+version https://git-lfs.github.com/spec/v1
+oid sha256:1a394f1accb005f78209163354b59ba6d165da5707d6a3c6f46a1b900eced914
+size 462

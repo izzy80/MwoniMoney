@@ -1,3 +1,12 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:74f229ccc936f9a0854bf6410e694f1914b1d0e4f60da733955c9cf39abfd09f
-size 449
+mySECRET_KEY = 'django-insecure-vce0jr_sl(8t84axzii-zi+!yigles=up!9et52=h02yv4a0k1'
+
+myDATABASES = {
+	'default' : {
+					'ENGINE' : 'django.db.backends.mysql', # 벡엔드 엔진
+					'NAME' : 'mwonimoneydb', # 'mysql'의 이름을 가진 데이터베이스
+					'USER' : 'ssafy-b310', # 계정
+					'PASSWORD' : 'j9b310p_kplyjc', #rootpassword로 지정할 숫자(6번에 나와있음)
+					'HOST' : 'j9b310.p.ssafy.io',
+					'PORT' : '50000'
+		}
+}

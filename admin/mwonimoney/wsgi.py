@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:de419bcf9615efcf4cbf84e5fa78c26e86811c782c71c3e1ff2c7335f4548bd0
-size 397
+"""
+WSGI config for mwonimoney project.
+
+It exposes the WSGI callable as a module-level variable named ``application``.
+
+For more information on this file, see
+https://docs.djangoproject.com/en/4.0/howto/deployment/wsgi/
+"""
+
+import os
+
+from django.core.wsgi import get_wsgi_application
+
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'mwonimoney.settings')
+
+application = get_wsgi_application()

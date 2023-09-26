@@ -1,13 +1,3 @@
-package com.ntt.mwonimoney.domain.game.service;
-
-import com.ntt.mwonimoney.domain.game.entity.Word;
-
-import reactor.core.publisher.Flux;
-import reactor.core.publisher.Mono;
-
-public interface WordCloudService {
-
-	Flux<Word> getWordCloudData(Long balanceGameIdx);
-
-	Mono<Word> addWord(Word word, Long balanceGameIdx);
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:10c4baa7cbb29ca8ab78fdd6597a2324bac3ed225bae791405edc03d6fc21569
+size 357

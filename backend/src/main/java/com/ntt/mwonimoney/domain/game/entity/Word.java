@@ -1,24 +1,3 @@
-package com.ntt.mwonimoney.domain.game.entity;
-
-import java.time.LocalDateTime;
-
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
-
-import lombok.Builder;
-import lombok.Data;
-
-@Data
-@Builder
-@Document(collection = "word")
-public class Word {
-
-	@Id
-	private String id;
-
-	private Long balanceGameIdx;
-
-	private String word;
-
-	private Long count;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b5fbb8c2d60227a9ff7b6f2616256cc94b8da6391d33981fefd90dc7f36f28ea
+size 352

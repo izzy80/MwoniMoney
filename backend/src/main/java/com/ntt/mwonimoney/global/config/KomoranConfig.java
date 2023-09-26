@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:472c89247bc34804bfb602c983bddfae633fa3fce66252c04f617e7e8b5d44a2
-size 401
+package com.ntt.mwonimoney.global.config;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+import kr.co.shineware.nlp.komoran.constant.DEFAULT_MODEL;
+import kr.co.shineware.nlp.komoran.core.Komoran;
+
+@Configuration
+public class KomoranConfig {
+
+	@Bean
+	public Komoran komoranFactory() {
+		return new Komoran(DEFAULT_MODEL.LIGHT);
+	}
+}

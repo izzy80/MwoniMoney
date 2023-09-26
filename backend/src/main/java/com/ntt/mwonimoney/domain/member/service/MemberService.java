@@ -1,14 +1,3 @@
-package com.ntt.mwonimoney.domain.member.service;
-
-import com.ntt.mwonimoney.domain.member.model.vo.SmallAccount;
-
-public interface MemberService {
-
-	public void changeNickname(String newNickName);
-
-	public void addSmallAccount(SmallAccount smallAccount);
-
-	public void finishSmallAccount(String uuid);
-
-	public void getMemberInfo(String uuid);
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ddd7645c992fd9666763e822281c4b3846ad8b2cd0caca5a70bec9192fe7656b
+size 487

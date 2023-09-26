@@ -1,23 +1,3 @@
-package com.ntt.mwonimoney.domain.member.model.vo;
-
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-
-@Getter
-@AllArgsConstructor
-public class SmallAccount {
-
-	private int goalMoney;
-	private String goalName;
-	private String imageFilename;
-	private byte saveRatio;
-
-	public SmallAccount createVo() {
-		return new SmallAccount(
-			this.getGoalMoney(),
-			this.goalName,
-			this.imageFilename,
-			this.saveRatio
-		);
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:baafd943ba8d6057a34032c19e76a416d2a9f63cf8a36bdc6d61cbfb09d14607
+size 747

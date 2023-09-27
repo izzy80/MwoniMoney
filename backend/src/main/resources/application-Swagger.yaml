@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7cb7a159b53ea99638cb22f316d20327b714f96a1b5341d15391a8930081485f
-size 382
+springdoc:
+  version: '@project.version@'
+  api-docs:
+    path: /api-docs
+  default-consumes-media-type: application/json
+  default-produces-media-type: application/json
+  swagger-ui:
+    operations-sorter: alpha
+    tags-sorter: alpha
+    path: /swagger-ui.html
+    disable-swagger-default-url: false
+    display-query-params-without-oauth2: true
+  paths-to-match:
+    - /api/v1/**

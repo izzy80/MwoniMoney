@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b9edc4c85e08dba830a3413d934f5a84b4e59a267e1a18e12bf58f903528ca78
-size 406
+package com.ntt.mwonimoney.domain.game.repository;
+
+import java.util.Optional;
+
+import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.data.mongodb.repository.Query;
+
+import com.ntt.mwonimoney.domain.game.entity.Word;
+
+public interface WordCloudRepository extends MongoRepository<Word, String> {
+
+	@Query("{word : ?0}")
+	Optional<Word> findWordByWord(String word);
+}

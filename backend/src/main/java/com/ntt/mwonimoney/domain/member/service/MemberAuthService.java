@@ -1,13 +1,3 @@
-package com.ntt.mwonimoney.domain.member.service;
-
-import com.ntt.mwonimoney.domain.member.model.dto.MemberAuthDto;
-
-public interface MemberAuthService {
-
-	MemberAuthDto getMemberAuthInfo(String memberUUID);
-
-	void Login(MemberAuthDto memberAuthDto);
-
-	void Logout(String memberUUID);
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5f375ad63fa1d758bf6b5bcbe80234365cdd32deaef48adf762b5c21df10d299
+size 288

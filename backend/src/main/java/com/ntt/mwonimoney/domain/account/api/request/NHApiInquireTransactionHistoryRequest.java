@@ -1,18 +1,3 @@
-package com.ntt.mwonimoney.domain.account.api.request;
-
-import lombok.Builder;
-import lombok.Data;
-
-@Data
-@Builder
-public class NHApiInquireTransactionHistoryRequest {
-    private NHApiRequestHeader requestHeader;
-    private BncdType Bncd;
-    private String Acno;
-    private String Insymd;
-    private String Ineymd;
-    private TrnsDsncType TrnsDsnc = TrnsDsncType.A;
-    private LnsqType Lnsq = LnsqType.ASC;
-    private int PageNo = 1;
-    private int Dmcnt;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:8c931b8cf13d8988fa356007a7c8d6216fe41bd66bc47b3c65f88f35db0941ee
+size 551

@@ -1,25 +1,3 @@
-package com.ntt.mwonimoney.domain.game.model.dto;
-
-import com.ntt.mwonimoney.domain.game.model.vo.BalanceGameStatus;
-
-import lombok.Builder;
-import lombok.Data;
-
-@Data
-@Builder
-public class BalanceGameDto {
-
-	Long idx;
-
-	String question;
-
-	String leftAnswer;
-
-	String rightAnswer;
-
-	BalanceGameStatus balanceGameStatus;
-
-	private int countOfLeftAnswer;
-
-	private int countOfRightAnswer;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b9693fba5e2cb10cea8131cebe87b10aaa6c7089c214e920321b1d30541f8698
+size 535

@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:134c8a173c7345f657c92d3971fbddf42d7c7c348d77f36c4dc9c79084516990
-size 335
+import React from "react";
+import { useState } from "react";
+import QRCode from "qrcode.react";
+
+function Qr() {
+  const parentsUuid = localStorage.getItem("");
+  const qrLink = "https://j9b310.p.ssafy.io/api/v1/children/${parentsUuid}";
+
+  return (
+    <div>
+      <QRCode value={qrLink} />{" "}
+    </div>
+  );
+}
+
+export default Qr;

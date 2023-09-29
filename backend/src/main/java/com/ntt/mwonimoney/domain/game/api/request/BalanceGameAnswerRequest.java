@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:fd54cac2f2d38be104be9f64061dc85b49427a7e454f05d531038e9666419149
-size 263
+package com.ntt.mwonimoney.domain.game.api.request;
+
+import com.ntt.mwonimoney.domain.game.model.vo.BalanceGameAnswer;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+public class BalanceGameAnswerRequest {
+
+	private BalanceGameAnswer selectAnswer;
+}

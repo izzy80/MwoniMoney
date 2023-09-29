@@ -1,3 +1,9 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:dcff6dec8fe12f28e694b7d312b192665286d0041477034cc7ebb9eb9b8bfd82
-size 246
+package com.ntt.mwonimoney.domain.account.repository;
+
+import com.ntt.mwonimoney.domain.account.entity.FinAccount;
+
+import java.util.List;
+
+public interface FinAccountRepositoryCustom {
+    public List<FinAccount> findByMember(Long memberIdx);
+}

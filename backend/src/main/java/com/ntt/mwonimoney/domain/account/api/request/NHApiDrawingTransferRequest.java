@@ -1,3 +1,10 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:08167a67f23b870164d843b95cb5b2fc4d077e8277225016efbef62ea4900106
-size 203
+package com.ntt.mwonimoney.domain.account.api.request;
+
+import lombok.Builder;
+import lombok.Data;
+
+@Data
+@Builder
+public class NHApiDrawingTransferRequest {
+	private NHApiRequestHeader requestHeader;
+}

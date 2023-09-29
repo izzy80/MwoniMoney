@@ -1,12 +1,3 @@
-package com.ntt.mwonimoney.domain.member.service;
-
-import com.ntt.mwonimoney.domain.member.api.request.MemberInfoChangeRequest;
-import com.ntt.mwonimoney.domain.member.model.dto.MemberDto;
-
-public interface MemberService {
-
-	public MemberDto getMemberInfo(Long memberIdx);
-
-	public void editMember(MemberInfoChangeRequest request, Long memberIdx);
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:c21401f25b66328bfd9cf49f30185e81d2006495b6da42df252695b7ce39a13d
+size 351

@@ -1,19 +1,3 @@
-package com.ntt.mwonimoney.domain.member.api;
-
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-
-import com.ntt.mwonimoney.domain.member.service.ChildService;
-
-import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
-
-@RestController
-@RequiredArgsConstructor
-@RequestMapping("/api/v1")
-@Slf4j
-public class ChildApi {
-
-	private ChildService childService;
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:20a70dd1c19d92f9a9d08fcd45a0c29f22fa3ecb7f4d7c7c415a77f590739686
+size 4260

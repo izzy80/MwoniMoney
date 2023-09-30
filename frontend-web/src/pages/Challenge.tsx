@@ -1,12 +1,3 @@
-import React from "react";
-import ChallengeParents from "../components/Parents/Challenge";
-import ChallengeChild from "../components/Children/Challenge";
-
-function Challenge() {
-  //number = 1 : 부모 , number = 0 : 자식
-  const role: number = 0;
-  return <>{role === 1 ? <ChallengeParents /> : <ChallengeChild  ismain = "N"/>}</>;
-}
-
-export default Challenge;
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:adff88dbe31cffdaea11714cd8a8307d40cc0ff78a0a60879902f18181bfc14a
+size 365

@@ -1,3 +1,27 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4f3fe13e83b1f281236e6bcca167984616749dd1169bcada54a526e4ec1bd3e6
-size 542
+package com.ntt.mwonimoney.domain.member.model.dto;
+
+import com.ntt.mwonimoney.domain.member.model.vo.MemberRole;
+import com.ntt.mwonimoney.domain.member.model.vo.SocialProvider;
+
+import lombok.Data;
+import lombok.experimental.SuperBuilder;
+
+@Data
+@SuperBuilder
+public abstract class MemberDto {
+
+	private String uuid;
+
+	private int status;
+
+	private String name;
+
+	private String nickname;
+
+	private String birthday;
+
+	private SocialProvider socialProvider;
+
+	private MemberRole memberRole;
+
+}

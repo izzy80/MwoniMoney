@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:efb3617629c10f77ce27f7b1dce154c3b4c352eb879deccb68c04fd51a77ccf0
-size 521
+package com.ntt.mwonimoney.domain.game.repository;
+
+import java.util.Optional;
+
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Slice;
+
+import com.ntt.mwonimoney.domain.game.model.dto.BalanceGameDto;
+
+public interface CustomBalanceGameRepository {
+	Slice<BalanceGameDto> findSliceGamesBy(Pageable pageable);
+
+	Optional<BalanceGameDto> findBalanceGameDtoByIdx(Long idx);
+
+	Optional<BalanceGameDto> findTodayBalanceGameDto();
+}

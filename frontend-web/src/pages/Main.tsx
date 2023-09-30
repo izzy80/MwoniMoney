@@ -1,11 +1,3 @@
-import React from "react";
-import ChildrenPage from "./ChildrenPage";
-import ParentsPage from "./ParentsPage";
-
-function Main() {
-  //number = 1 : 부모 , number = 0 : 자식
-  const role: number = 0;
-  return <>{role === 1 ? <ParentsPage /> : <ChildrenPage />}</>;
-}
-
-export default Main;
+version https://git-lfs.github.com/spec/v1
+oid sha256:d30fe49dbbb5c806a615bc77aa52d105df66846fc2ceac30a21ceb77f1a96062
+size 796

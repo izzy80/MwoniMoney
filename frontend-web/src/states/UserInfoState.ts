@@ -1,23 +1,3 @@
-import { atom } from "recoil";
-import { recoilPersist } from "recoil-persist";
-
-const { persistAtom } = recoilPersist({
-  key: "userState",
-  storage: localStorage,
-});
-
-export const userDataState = atom({
-  key: "userDataState",
-  default: {
-    idx: 0,
-    uuid: "",
-    status: 0,
-    name: "",
-    nickname: "",
-    birthday: "",
-    socialProvider: "",
-    socialId: "",
-    memberRole: "",
-  },
-  effects_UNSTABLE: [persistAtom],
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:cbffd8c0dc61230db5a508ca4edcd6823a82b9a4c98dfe07e598e68894075004
+size 1082

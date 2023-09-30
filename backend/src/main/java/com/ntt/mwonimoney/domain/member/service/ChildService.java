@@ -1,18 +1,3 @@
-package com.ntt.mwonimoney.domain.member.service;
-
-public interface ChildService {
-
-	public void addSmallAccountInfo(
-		Long memberIdx,
-		int goalMoney,
-		String goalName,
-		String imageFilename,
-		int saveRatio);
-
-	public void deleteSmallAccountInfo(Long memberIdx);
-
-	public void editQuizReward(Long memberIdx, int quizReward);
-
-	public void editQuizRewardRemain(Long memberIdx, int quiRewardRemainToAdd);
-	
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f0e77037fa79d9ea1f14a5b624b9565503770a108bfc29cc8981e24523fdbd12
+size 550

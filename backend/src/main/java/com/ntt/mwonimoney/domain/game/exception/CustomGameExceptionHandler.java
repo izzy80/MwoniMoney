@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d8f7511fcdd29acdc72dd47a8e83bc3f4e52a45499ef6a9ca2315617416114f1
-size 504
+package com.ntt.mwonimoney.domain.game.exception;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.RestControllerAdvice;
+
+@RestControllerAdvice
+public class CustomGameExceptionHandler {
+
+	@ExceptionHandler
+	public ResponseEntity handleGameDeactivateException(GameDeactivateException e) {
+
+		String errorMessage = e.getMessage();
+
+		return ResponseEntity.badRequest().body(errorMessage);
+	}
+}

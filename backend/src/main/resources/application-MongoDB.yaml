@@ -1,10 +1,3 @@
-spring:
-  data:
-    mongodb:
-      host: j9b310.p.ssafy.io
-      port: 27017
-      username: ssafy-b310
-      password: j9b310p_kplyjc
-      authentication-database: mownimoney
-      database: mwonimoney
-      uri: mongodb://ssafy-b310:j9b310p_kplyjc@j9b310.p.ssafy.io:27017/?authMechanism=SCRAM-SHA-1
+version https://git-lfs.github.com/spec/v1
+oid sha256:79e1de3ce4c957c716766ab43b39f83816fd692935baa07a5408d4ee0356f638
+size 304

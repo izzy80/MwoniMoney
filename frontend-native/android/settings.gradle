@@ -1,3 +1,9 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:22d1f3097bf03fb796b47c91e25ffc0a5f74e70b069f0a1856b740d6b37c5cd7
-size 465
+rootProject.name = 'YourProjectName'
+apply from: file("../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesSettingsGradle(settings)
+include ':app'
+includeBuild('../node_modules/react-native-gradle-plugin')
+
+if (settings.hasProperty("newArchEnabled") && settings.newArchEnabled == "true") {
+    include(":ReactAndroid")
+    project(":ReactAndroid").projectDir = file('../node_modules/react-native/ReactAndroid')
+}

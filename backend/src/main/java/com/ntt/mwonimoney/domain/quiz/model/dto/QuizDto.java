@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3c22692e5f5ef2c4c232e59c3655e23218b743bb9f975568ca2f08418db13af4
-size 311
+package com.ntt.mwonimoney.domain.quiz.model.dto;
+
+import lombok.Builder;
+import lombok.Data;
+
+@Builder
+@Data
+public class QuizDto {
+
+	private Long id;
+
+	private String question;
+
+	private String option1;
+
+	private String option2;
+
+	private String option3;
+
+	private String option4;
+
+	private int answer;
+
+}

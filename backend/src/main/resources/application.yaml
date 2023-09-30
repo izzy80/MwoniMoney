@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5b183975a07a13721e0c4a8f8c11716d482ef5a39b5fb9235571b2b7042158e4
-size 168
+spring:
+  profiles:
+    include: JPA,MariaDB,MongoDB,Oauth,Redis,Swagger,S3
+  servlet:
+    multipart:
+      max-file-size: 1024MB
+      max-request-size: 1024MB
+
+
+
+
+
+
+

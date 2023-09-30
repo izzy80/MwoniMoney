@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0d6fbdecaa3dd67beef78009551de9e5cee02c2ab2a5b482e40010f4742a08d0
-size 313
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.DS_Store
+# .env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+

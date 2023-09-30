@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:fdf1799006a2eea7b28f7f0f1aebe0e42e846973f463a9aa83a93cc2513e136d
-size 412
+package com.ntt.mwonimoney.domain.member.service;
+
+public interface ChildService {
+
+	public void addSmallAccountInfo(
+		Long memberIdx,
+		int goalMoney,
+		String goalName,
+		String imageFilename,
+		int saveRatio);
+
+	public void deleteSmallAccountInfo(Long memberIdx);
+
+	public void editQuizReward(Long memberIdx, int quizReward);
+
+	public void editQuizRewardRemain(Long memberIdx, int quiRewardRemainToAdd);
+	
+}

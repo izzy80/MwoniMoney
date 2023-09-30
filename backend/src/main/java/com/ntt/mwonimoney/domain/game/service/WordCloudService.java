@@ -1,15 +1,3 @@
-package com.ntt.mwonimoney.domain.game.service;
-
-import java.util.List;
-
-import com.ntt.mwonimoney.domain.game.entity.Chat;
-import com.ntt.mwonimoney.domain.game.entity.Word;
-
-import reactor.core.publisher.Flux;
-
-public interface WordCloudService {
-
-	Flux<List<Word>> getWordCloudData(Long balanceGameIdx);
-
-	void addWord(Chat chat, Long balanceGameIdx);
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:10c4baa7cbb29ca8ab78fdd6597a2324bac3ed225bae791405edc03d6fc21569
+size 357

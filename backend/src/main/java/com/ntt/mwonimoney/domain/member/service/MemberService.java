@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:17ffe1d7edd31e514480f7e21ba21e09312f047546ae76d581917eca882719d6
-size 485
+package com.ntt.mwonimoney.domain.member.service;
+
+import com.ntt.mwonimoney.domain.member.api.request.MemberInfoChangeRequest;
+import com.ntt.mwonimoney.domain.member.model.dto.MemberDto;
+import com.ntt.mwonimoney.domain.member.model.vo.MemberRole;
+
+public interface MemberService {
+
+	public MemberDto getMemberInfo(Long memberIdx);
+
+	public void editMember(MemberInfoChangeRequest request, Long memberIdx);
+
+	public void changeMemberRole(String memberUUID, MemberRole memberRole);
+}

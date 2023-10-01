@@ -1,9 +1,3 @@
-import axios, { AxiosError } from "axios";
-import { API_BASE_URL } from "./Url";
-export const api = axios.create({
-  baseURL: API_BASE_URL,
-  headers: {
-    "Content-type": "application/json",
-    Authorization: "Bearer " + localStorage.getItem("token"),
-  },
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:3ccbc9860d2180139b6412b65944dcb557a24829986996c42055635220d26b13
+size 332

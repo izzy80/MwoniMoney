@@ -1,19 +1,3 @@
-import { atom } from "recoil";
-import { recoilPersist } from "recoil-persist";
-
-interface GoalMoneyProps {
-  goalName: string;
-  goalMoney: number;
-  saveRatio: number;
-  image: any;
-}
-
-export const GoalMoneyState = atom<GoalMoneyProps>({
-  key: "GoalMoneyState",
-  default: {
-    goalName: "",
-    goalMoney: 0,
-    saveRatio: 0,
-    image: new File([], "dummy.jpg"),
-  },
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:b3726ae9f604e52c9bed607f040d162e797835761999c3cc1f3ce5edf1785c9b
+size 1046

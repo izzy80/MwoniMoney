@@ -1,16 +1,3 @@
-package com.ntt.mwonimoney.domain.account.api.response;
-
-import lombok.Builder;
-import lombok.Data;
-
-@Data
-@Builder
-public class VirtualAccountReceivedInquiry {
-    private String Sqno;
-    private String Vran;
-    private MnrcSttsType MnrcStts;
-    private String MnrcDt;
-    private String Mntmd;
-    private String MnChkTm;
-    private int MnrcAmt;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:7af49e661747d83dae9782319118968a24bc91d82198eddc3d24906116b9d43e
+size 354

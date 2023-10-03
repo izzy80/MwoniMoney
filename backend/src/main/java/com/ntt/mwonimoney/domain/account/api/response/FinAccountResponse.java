@@ -1,21 +1,3 @@
-package com.ntt.mwonimoney.domain.account.api.response;
-
-import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
-
-import com.ntt.mwonimoney.domain.account.model.dto.FinAccountTransactionDto2;
-
-import lombok.Data;
-
-@Data
-public class FinAccountResponse {
-	private String number;
-	private Long remain;
-	private LocalDate createdDay;
-	private List<FinAccountTransactionDto2> finAccountTransactionDtos;
-
-	public FinAccountResponse() {
-		finAccountTransactionDtos = new ArrayList<>();
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a7f826a8ec569494db162a33f913dcbe9bf5840662e6ee01b6e886c6ce8a71a5
+size 530

@@ -1,12 +1,3 @@
-package com.ntt.mwonimoney.domain.account.repository;
-
-import com.ntt.mwonimoney.domain.account.entity.FinAccount;
-import com.ntt.mwonimoney.domain.account.entity.FinAccountType;
-import com.ntt.mwonimoney.domain.member.model.vo.SmallAccount;
-
-import java.util.List;
-import java.util.Optional;
-
-public interface FinAccountRepositoryCustom {
-    public Optional<FinAccount> findFinAccountByMemberAndType(Long memberIdx, FinAccountType finAccountType);
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e0bbaf25f158c41cc8c8e9af36332de13560435ede5d9737875470bdbb12895a
+size 619

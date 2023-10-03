@@ -1,21 +1,3 @@
-package com.ntt.mwonimoney.domain.account.model.dto;
-
-import com.ntt.mwonimoney.domain.account.entity.LoanStatus;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
-
-import java.time.LocalDateTime;
-
-@Builder
-@Getter
-@Setter
-public class CreateLoanRequest {
-    private Long borrower;
-    private LoanStatus status;
-    private String name;
-    private String content;
-    private int amount;
-    private LocalDateTime deadline;
-    private Double rate;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b00ce35a6c38116d70fee2049b3087168a86905c1371f276bb7e15ecfce1ce59
+size 471

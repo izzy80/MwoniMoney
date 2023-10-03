@@ -1,13 +1,3 @@
-package com.ntt.mwonimoney.domain.account.model.dto;
-
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
-
-@Builder
-@Getter
-@Setter
-public class FinAccountTransactionListRequest {
-    PageToScroll pageToScroll;
-    FinAccountTransactionListRequestType type;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:8d021411ad915326938cf740bef15663b47a69e952e674563e2c5a326dead37b
+size 275

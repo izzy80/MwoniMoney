@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:35a7377d6cd7f92fdd884a2afad3b616c08877f354aeb3154c39ec5302797053
-size 323
+package com.ntt.mwonimoney.domain.account.model.dto;
+
+import com.ntt.mwonimoney.domain.account.entity.LoanStatus;
+import lombok.*;
+
+@Getter
+@Setter
+@Builder
+public class LoanListRequestDto {
+    private LoanListRequestStatus loanListRequestStatus;
+    private LoanMemberType loanMemberType;
+    private String childUUID;
+}

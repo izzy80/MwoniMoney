@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ce2bb36e325b51f4ef089d99c9118fb1f78411ae305d5ab1874d6662623f914c
-size 389
+package com.ntt.mwonimoney.domain.account.api.response;
+
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+public class NHOpenVirtualAccountResponse {
+    private NHApiResponseHeader responseHeader;
+    private String Dpnm;
+    private String VractPrtn;
+    private String Vran;
+    private int IsncRmngCnt;
+    private int IsncFncnt;
+}

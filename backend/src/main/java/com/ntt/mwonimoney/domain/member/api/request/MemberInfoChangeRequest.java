@@ -1,16 +1,3 @@
-package com.ntt.mwonimoney.domain.member.api.request;
-
-import java.util.Optional;
-
-import lombok.Builder;
-import lombok.Data;
-
-@Data
-@Builder
-public class MemberInfoChangeRequest {
-
-	private Optional<String> name;
-	private Optional<String> nickname;
-	private Optional<String> email;
-	private Optional<String> birthday;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:627334663965add1c9fd10a22be0f54d82ad7820839c67b51840feed8d5534fa
+size 321

@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:99016c4cf399655a84b6c88d1fd06a5fb1ed31675864101aba08e4b94b24f8de
-size 309
+package com.ntt.mwonimoney.domain.account.model.dto;
+
+import lombok.*;
+
+@Getter
+@Setter
+@Builder
+public class FinAccountTransferRequest {
+    private Long receiverIdx;
+    private int price;
+    private String senderContent; // 출금계좌 내용
+    private String receiverContent; // 입금계좌 내용
+}

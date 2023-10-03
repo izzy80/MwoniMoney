@@ -1,11 +1,3 @@
-package com.ntt.mwonimoney.domain.account.repository;
-
-import com.ntt.mwonimoney.domain.account.entity.Loan;
-import com.ntt.mwonimoney.domain.account.model.dto.LoanListRequestDto;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Slice;
-
-import java.util.Optional;
-
-public interface LoanRepositoryCustom {
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ba92dbd8ee2591538ad59355c2e33fdd20b923044c4b813f0d3f55be1d7abba9
+size 403

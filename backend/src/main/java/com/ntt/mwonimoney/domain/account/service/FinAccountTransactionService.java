@@ -1,12 +1,3 @@
-package com.ntt.mwonimoney.domain.account.service;
-
-import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
-
-@Service
-@RequiredArgsConstructor
-@Transactional(readOnly = true)
-public class FinAccountTransactionService {
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:10a64827c206be37f90a1be11654f48d931ad01ea2ed72b3347978252edb773a
+size 1484

@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ea83bfbe455fdba4f8b6b596e242bfb10b9a8a06521fcdc7d21c6ac65d39bbee
-size 397
+package com.ntt.mwonimoney.domain.account.api.response;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.ntt.mwonimoney.domain.account.api.request.NHApiRequestHeader;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+public class NHApiReceivedTransferAccountNumberResponse {
+    @JsonProperty("Header")
+    private NHApiRequestHeader requestHeader;
+}

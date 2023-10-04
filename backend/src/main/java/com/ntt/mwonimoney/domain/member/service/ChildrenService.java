@@ -1,17 +1,3 @@
-package com.ntt.mwonimoney.domain.member.service;
-
-import java.util.List;
-
-import com.ntt.mwonimoney.domain.member.model.dto.ChildDto;
-
-public interface ChildrenService {
-
-	void addParent(String parentUUID, String childUUID);
-
-	List<ChildDto> getChildren(String parentUUID);
-
-	ChildDto getChildInfo(String parentUUID, String childUUID);
-
-	void removeChild(String parentUUID, String childUUID);
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d8790d98ef8ba8adea112e2f7dfe24f32d5031ff30f0af6c0fdf5f091ae6d349
+size 469

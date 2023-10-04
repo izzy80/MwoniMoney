@@ -1,7 +1,3 @@
-package com.ntt.mwonimoney.domain.account.api.response;
-
-public class NHApiTransactionHistory {
-    private String Trdd;
-    private String Txtm;
-//    private MnrcDrotDsncType MnrcDrotDsnc;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:78964465bf7c071b52c833378c9b03fdf7bf114fa5ad69f1696532c88b05e059
+size 525

@@ -1,3 +1,21 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7a2296ec06acf252a02dc8f0fc2552c1ad5b2266f987de09795dbdbd789ce4c7
-size 423
+import React from "react";
+import Footer from "./footer";
+import Header from "./header";
+import { Outlet } from "react-router-dom";
+import FooterChild from "./footerChild";
+
+function ChildrenLayout() {
+  return (
+    <>
+      <Header />
+      <div style={{ height: "80vh", paddingTop: "10vh" }}>
+        <Outlet />
+      </div>
+
+      {/* <Footer /> */}
+      <FooterChild />
+    </>
+  );
+}
+
+export default ChildrenLayout;

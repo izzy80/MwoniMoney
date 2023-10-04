@@ -1,23 +1,3 @@
-package com.ntt.mwonimoney.domain.account.model.dto;
-
-import com.ntt.mwonimoney.domain.account.entity.FinAccountStatus;
-import com.ntt.mwonimoney.domain.account.entity.FinAccountType;
-
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
-
-@Builder
-@Getter
-@Setter
-public class FinAccountDto {
-
-	private Long idx;
-
-	private String number;
-
-	private FinAccountStatus status;
-
-	private FinAccountType type;
-}
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:855b925243ea648fc1375f94291b100951c76e454e1e144606d73bbdd63f8589
+size 493

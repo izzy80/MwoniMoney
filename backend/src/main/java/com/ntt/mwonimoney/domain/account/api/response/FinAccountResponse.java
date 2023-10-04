@@ -1,17 +1,3 @@
-package com.ntt.mwonimoney.domain.account.api.response;
-
-import java.time.LocalDate;
-import java.util.List;
-
-import com.ntt.mwonimoney.domain.account.model.dto.FinAccountTransactionDto;
-
-import lombok.Data;
-
-@Data
-public class FinAccountResponse {
-	private String number;
-	private Long remain;
-	private LocalDate createdDay;
-	private String status;
-	List<FinAccountTransactionDto> finAccountTransaction;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:66fd5e406cc0ecd33befd27606f28fcb5ef3ff9fe6ad85b9451c76cfe2be0826
+size 406

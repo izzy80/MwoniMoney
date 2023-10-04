@@ -1,15 +1,3 @@
-package com.ntt.mwonimoney.domain.account.api.request;
-
-import lombok.Builder;
-import lombok.Data;
-
-@Data
-@Builder
-public class NHApiReceivedTransferAccountNumberRequest {
-    private NHApiRequestHeader requestHeader;
-    private BncdType bncdType;
-    private String Acno;
-    private String Tram;
-    private String DractOtlt;
-    private String MractOtlt;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:9af4f37a9d79ec5e1e78afab63e350f5d4486b7a3e52b4c1d4cfa488cdbdf7ec
+size 443

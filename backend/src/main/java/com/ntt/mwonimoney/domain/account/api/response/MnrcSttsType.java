@@ -1,18 +1,3 @@
-package com.ntt.mwonimoney.domain.account.api.response;
-
-public enum MnrcSttsType {
-    TYPE_NORMAL("1"),
-    TYPE_PROCESSING("0"),
-    TYPE_ERROR("9");
-
-    private final String value;
-
-    MnrcSttsType(String value) {
-        this.value = value;
-    }
-
-    public String getValue() {
-        return value;
-    }
-}
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:65855a0830abad1d44aa62d4cc66682676cb27d12d51c80bccab7111cab93086
+size 317

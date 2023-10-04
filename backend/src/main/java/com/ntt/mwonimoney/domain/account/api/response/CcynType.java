@@ -1,16 +1,3 @@
-package com.ntt.mwonimoney.domain.account.api.response;
-
-public enum CcynType {
-    TYPE_NORMAL("0"),
-    TYPE_CANCEL("1");
-
-    private final String value;
-
-    CcynType(String value) {
-        this.value = value;
-    }
-
-    public String getValue() {
-        return value;
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:195f73c316ace3096d319a3b0af9672925ef7bbd886574fb8908c698192cce7b
+size 283

@@ -1,14 +1,3 @@
-package com.ntt.mwonimoney.domain.quiz.repository;
-
-import java.util.List;
-
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.Query;
-
-import com.ntt.mwonimoney.domain.quiz.entity.Quiz;
-
-public interface QuizRepository extends JpaRepository<Quiz, Long> {
-
-	@Query(value = "SELECT * FROM quiz ORDER BY RAND() limit 5", nativeQuery = true)
-	List<Quiz> findRandom5Quiz();
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d04171b128b322a2703a2ba3a4c6526f13ed03cab631a0997f95f4174e3d884a
+size 429

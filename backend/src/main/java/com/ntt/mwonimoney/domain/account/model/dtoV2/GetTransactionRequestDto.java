@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c8dabdddb7adb5a525ea0be40e9bd948d7c6565574ba5e6da757b2ac4b341dc5
-size 441
+package com.ntt.mwonimoney.domain.account.model.dtoV2;
+
+import com.ntt.mwonimoney.domain.account.entity.FinAccountType;
+import com.ntt.mwonimoney.domain.account.model.dto.FinAccountTransactionListRequestType;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.Setter;
+
+@Builder
+@Getter
+@Setter
+public class GetTransactionRequestDto {
+    FinAccountTransactionListRequestType type;
+    FinAccountType finAccountType;
+    String childUUID;
+}

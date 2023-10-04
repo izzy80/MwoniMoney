@@ -1,3 +1,21 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f6b28deffad5e07c3dfdbbc4e9488cf82a7a4670c03a2fab415012c60846098c
-size 355
+package com.ntt.mwonimoney.domain.account.model.dto;
+
+import lombok.Builder;
+import lombok.Getter;
+import lombok.Setter;
+
+import java.time.LocalDateTime;
+import java.util.List;
+
+@Getter
+@Setter
+@Builder
+public class GetTransactionResponseDto {
+
+    private List<FinAccountTransactionDto2> FinAccountTransactionDto2;
+
+    private Long totalPlus;
+
+    private Long totalMinus;
+
+}

@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:509b7a0469d5f37acd396363034cb995316a35bb06d9400f694a164b3b3722f1
-size 343
+package com.ntt.mwonimoney.domain.account.model.dto;
+
+import com.ntt.mwonimoney.domain.account.entity.FinAccountType;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.Setter;
+
+@Builder
+@Getter
+@Setter
+public class FinAccountTransactionListRequest {
+    String memberUUID;
+    FinAccountTransactionListRequestType type;
+    FinAccountType finAccountType;
+}

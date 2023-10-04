@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a3ca31001cbcb910fd2812dd070dd46b581da3ac1844ce144b008dd9d2ef8d77
-size 506
+package com.ntt.mwonimoney.domain.account.api.response;
+
+import java.time.LocalDate;
+
+import lombok.Data;
+
+@Data
+public class FinAccountResponse {
+	private String number;
+	private Long remain;
+	private LocalDate createdDay;
+	private String status;
+}

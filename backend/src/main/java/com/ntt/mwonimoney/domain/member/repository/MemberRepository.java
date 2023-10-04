@@ -1,15 +1,3 @@
-package com.ntt.mwonimoney.domain.member.repository;
-
-import java.util.Optional;
-
-import org.springframework.data.jpa.repository.JpaRepository;
-
-import com.ntt.mwonimoney.domain.member.entity.Member;
-
-public interface MemberRepository extends JpaRepository<Member, Long> {
-	Optional<Member> findMemberByIdx(Long memberIdx);
-
-	Optional<Member> findMemberByUuid(String memberUUID);
-
-	Optional<Member> findMemberBySocialId(String socialId);
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d65515fbe5345436687c685fbb2bf2a7cd1c2a3d5cc5cb6231aecaffe728af94
+size 440

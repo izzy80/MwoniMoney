@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f2d7c75dcd031ad58e63ad7c59c1f3c7c588c96addbcc6ca838d35ce08e52496
-size 420
+package com.ntt.mwonimoney.domain.member.repository;
+
+import java.util.List;
+import java.util.Optional;
+
+import com.ntt.mwonimoney.domain.member.entity.Child;
+import com.ntt.mwonimoney.domain.member.entity.Parent;
+
+public interface CustomChildrenRepository {
+
+	Optional<Child> findChild(String parentUUID, String ChildUUID);
+
+	List<Parent> findParents(String childUUID);
+
+	List<Child> findChildren(String parentUUID);
+}

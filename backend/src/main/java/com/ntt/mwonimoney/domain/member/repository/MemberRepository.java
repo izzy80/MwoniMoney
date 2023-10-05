@@ -1,3 +1,12 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:18e215114b159d90b0a48cfa5722f47170a433a8da6e5da364c871234b96bddf
-size 414
+package com.ntt.mwonimoney.domain.member.repository;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.ntt.mwonimoney.domain.member.entity.Member;
+import com.ntt.mwonimoney.domain.member.model.vo.MemberRole;
+
+public interface MemberRepository extends JpaRepository<Member, Long>, CustomMemberRepository {
+	List<Member> findAllByMemberRole(MemberRole memberRole);
+}

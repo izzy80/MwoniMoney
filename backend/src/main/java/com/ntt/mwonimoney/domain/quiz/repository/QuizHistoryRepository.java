@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0b988272345f169ebf779110f32fe72bae5c7b06e392d385d327e7691425b945
-size 293
+package com.ntt.mwonimoney.domain.quiz.repository;
+
+import com.ntt.mwonimoney.domain.quiz.entity.QuizHistory;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface QuizHistoryRepository extends JpaRepository<QuizHistory, Long>, CustomQuizHistoryRepository {
+}

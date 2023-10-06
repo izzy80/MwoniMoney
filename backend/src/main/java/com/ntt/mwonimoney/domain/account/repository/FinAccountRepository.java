@@ -1,3 +1,9 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:df81954ef552896ec2afd2a580356a9c114d77a3276e76586908727a634411d4
-size 290
+package com.ntt.mwonimoney.domain.account.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.ntt.mwonimoney.domain.account.entity.FinAccount;
+
+public interface FinAccountRepository extends JpaRepository<FinAccount, Long>, FinAccountRepositoryCustom {
+
+}

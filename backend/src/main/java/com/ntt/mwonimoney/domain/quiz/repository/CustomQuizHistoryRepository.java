@@ -1,3 +1,10 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:231a174fe841f5594a92ce8da0b66c66d52195dbade6d4286719bec642d397e7
-size 406
+package com.ntt.mwonimoney.domain.quiz.repository;
+
+import com.ntt.mwonimoney.domain.quiz.entity.QuizHistory;
+import com.ntt.mwonimoney.domain.quiz.model.dto.PostAnswerRequestDto;
+import com.ntt.mwonimoney.domain.quiz.model.dto.PostAnswerResponseDto;
+
+public interface CustomQuizHistoryRepository {
+
+    public QuizHistory postAnswer(Long memberIdx, PostAnswerRequestDto postAnswerRequestDto);
+}

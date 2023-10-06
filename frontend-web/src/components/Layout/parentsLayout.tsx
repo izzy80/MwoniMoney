@@ -1,26 +1,3 @@
-import React from "react";
-import Footer from "./footer";
-import Header from "./header";
-import { Outlet } from "react-router-dom";
-
-function ParentsLayout() {
-  return (
-    <>
-      <Header />
-      <div
-        style={{
-          height: "80vh",
-          paddingTop: "10vh",
-          overflowX: "hidden",
-          overflowY: "auto",
-          // border: "2px solid orange",
-        }}
-      >
-        <Outlet />
-      </div>
-      <Footer />
-    </>
-  );
-}
-
-export default ParentsLayout;
+version https://git-lfs.github.com/spec/v1
+oid sha256:4d7edf6fd85270d6b46fd731e72e3f73bbeb9e26ac95a7ef5e3ff0cbd92bfc0b
+size 494

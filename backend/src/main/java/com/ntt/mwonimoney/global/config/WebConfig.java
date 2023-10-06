@@ -1,16 +1,3 @@
-package com.ntt.mwonimoney.global.config;
-
-import org.springframework.context.annotation.Configuration;
-import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
-
-@Configuration
-public class WebConfig implements WebMvcConfigurer {
-	@Override
-	public void addInterceptors(InterceptorRegistry registry) {
-		registry
-			.addInterceptor(new WebInterceptor())
-			.addPathPatterns("/**");
-	}
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:7b298497ad76e3ea6666d588b38bdad093da1854b90977270a611a7a2e370494
+size 483

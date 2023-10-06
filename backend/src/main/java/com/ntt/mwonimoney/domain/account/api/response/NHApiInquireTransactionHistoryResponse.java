@@ -1,17 +1,3 @@
-package com.ntt.mwonimoney.domain.account.api.response;
-
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
-import java.util.ArrayList;
-import java.util.List;
-
-@Data
-@NoArgsConstructor
-public class NHApiInquireTransactionHistoryResponse {
-    private NHApiResponseHeader responseHeader;
-    private CtntDataYnType CtntDataYn;
-    private int TotCnt;
-    private int Iqtcnt;
-    private List<NHApiTransactionHistory> transactionHistories = new ArrayList<>();
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:026c13e7b4720e4d17884f9f8fb2fba5d6a7ec88c0deee5bfef0070bfe6bd53c
+size 463

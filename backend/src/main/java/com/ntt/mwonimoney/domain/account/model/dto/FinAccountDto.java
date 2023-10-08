@@ -1,3 +1,23 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c0051070a86d67430f247f63f312dce589f8b3564eaacb013431caaf0ff4192c
-size 420
+package com.ntt.mwonimoney.domain.account.model.dto;
+
+import com.ntt.mwonimoney.domain.account.entity.FinAccountType;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+public class FinAccountDto {
+
+	private String finAcno;
+
+	private FinAccountType type;
+
+	private int remain;
+
+}
+

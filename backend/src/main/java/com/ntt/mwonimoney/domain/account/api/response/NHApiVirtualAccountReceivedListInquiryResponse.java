@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:81a2fa5751f8491792b82c5a801850fcafefcf9d1e1c6ce7a8c4ad8c05ed368f
-size 446
+package com.ntt.mwonimoney.domain.account.api.response;
+
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.util.ArrayList;
+import java.util.List;
+
+@Data
+@NoArgsConstructor
+public class NHApiVirtualAccountReceivedListInquiryResponse {
+    private NHApiResponseHeader responseHeader;
+    private int TotCnt;
+    private int IqtCnt;
+    private int PageNo;
+    private List<VirtualAccountReceivedInquiry> REC = new ArrayList<>();
+}

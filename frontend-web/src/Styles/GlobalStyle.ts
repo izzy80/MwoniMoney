@@ -1,19 +1,3 @@
-import { createGlobalStyle } from "styled-components";
-import { reset } from "styled-reset";
-import background from "../assests/image/backgroundv1.png";
-
-export const GlobalStyles = createGlobalStyle`
-    ${reset}
-    body{
-        // font-family: "Font_test"; 
-        position: absolute;
-        margin:0;
-        padding:0;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-image: url(${background});
-        background-size: cover;
-    }
-`;
+version https://git-lfs.github.com/spec/v1
+oid sha256:73f4571924615c740a79afdbf397d7c9fe64b6f26fbed72cf038b6df8ccca3c1
+size 1293

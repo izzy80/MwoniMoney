@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:812fab009a5992864f0f8fd436513556d180ef01ca80b1a06b5e457865fec9b1
-size 225
+spring:
+  data:
+    couchbase:
+      bucket-name: mwonimoney
+cloud:
+  aws:
+    stack:
+      auto: false
+    region:
+      static: ap-northeast-2
+    credentials:
+      secret-key: 
+      access-key:
+
+
+aws.s3.image.goal.url: 

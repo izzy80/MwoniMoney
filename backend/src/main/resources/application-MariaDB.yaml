@@ -1,6 +1,3 @@
-spring:
-  datasource:
-    driver-class-name: org.mariadb.jdbc.Driver
-    url: jdbc:mariadb://j9b310.p.ssafy.io:50000/mwonimoneydb
-    username: wannabe
-    password: i9b310p_kplyjc
+version https://git-lfs.github.com/spec/v1
+oid sha256:74f0ae106a56ea4a43251cdc4bd36aa486a1416240bd9e366b7099ad2a60d844
+size 215

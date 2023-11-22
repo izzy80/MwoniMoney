@@ -1,3 +1,23 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:03b1e7cd4c8c80dc429044f1bfacfc049fbb58221e987d12fec1973932d4f66b
-size 847
+package com.ntt.mwonimoney.global.security.jwt;
+
+import org.springframework.security.access.AccessDeniedException;
+import org.springframework.security.web.access.AccessDeniedHandler;
+import org.springframework.stereotype.Component;
+import org.springframework.web.servlet.HandlerExceptionResolver;
+
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import lombok.RequiredArgsConstructor;
+
+@Component
+@RequiredArgsConstructor
+public class TokenAccessDeniedHandler implements AccessDeniedHandler {
+
+	private final HandlerExceptionResolver handlerExceptionResolver;
+
+	@Override
+	public void handle(
+		HttpServletRequest request, HttpServletResponse response, AccessDeniedException accessDeniedException) {
+		handlerExceptionResolver.resolveException(request, response, null, accessDeniedException);
+	}
+}

@@ -1,3 +1,92 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1e07d7cd2ecd46c26138a0f928d91d4e429f663841958e4b25ce4a05c5d61c7e
-size 2611
+import React, { useState } from "react";
+import Switch from "@mui/material/Switch";
+import { Container } from "../About/AboutContainer";
+import { WhiteBox1 } from "../About/AboutWhilteContainer";
+import { TextBox } from "../About/AboutText";
+
+function Notifications() {
+  //알림
+  interface CheckedSettings {
+    challengeChecked: boolean;
+    balanceChecked: boolean;
+    savingChecked: boolean;
+    allowanceChecked: boolean;
+  }
+  const [checked, setChecked] = useState<CheckedSettings>({
+    challengeChecked: false,
+    balanceChecked: false,
+    savingChecked: false,
+    allowanceChecked: false,
+  });
+  const handleChange = (settingName: keyof CheckedSettings) => () => {
+    setChecked((prevSettings) => ({
+      ...prevSettings,
+      [settingName]: !prevSettings[settingName],
+    }));
+  };
+
+  return (
+    <Container height="30%">
+      <WhiteBox1 justify="center" align="center">
+        <Container width="95%" height="95%" flexDirection="column">
+          <TextBox height="40%" fontSize="1.5em">
+            알림설정
+          </TextBox>
+          <TextBox
+            height="20%"
+            fontSize="1em"
+            fontWeight="normal"
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+            }}
+          >
+            챌린지 알림
+            <Switch
+              checked={checked.challengeChecked}
+              onChange={handleChange("challengeChecked")}
+              color="primary"
+            />
+          </TextBox>
+          <TextBox
+            height="20%"
+            fontSize="1em"
+            fontWeight="normal"
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+            }}
+          >
+            밸런스게임 알림
+            <Switch
+              checked={checked.balanceChecked}
+              onChange={handleChange("balanceChecked")}
+              color="primary"
+            />
+          </TextBox>
+          <TextBox
+            height="20%"
+            fontSize="1em"
+            fontWeight="normal"
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+            }}
+          >
+            짜금통 알림
+            <Switch
+              checked={checked.savingChecked}
+              onChange={handleChange("savingChecked")}
+              color="primary"
+            />
+          </TextBox>
+        </Container>
+      </WhiteBox1>
+    </Container>
+  );
+}
+
+export default Notifications;

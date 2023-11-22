@@ -1,3 +1,38 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:db97b63876f89bc5967fd8df74f0551c79328835bf692472a9297f7661d6d1ca
-size 861
+import axios from "axios";
+import { API_BASE_URL } from "./Url";
+
+let instance = axios.create({
+  baseURL: API_BASE_URL,
+  withCredentials: true,
+});
+
+instance.interceptors.request.use(
+  (config) => {
+    config.headers.Authorization = "Bearer " + localStorage.getItem("token");
+    return config;
+  },
+  (error) => {
+    console.log(error);
+    return Promise.reject(error);
+  }
+);
+
+instance.interceptors.response.use(
+  (response) => {
+    console.log("인터셉터 헤더 : ", response.headers["x-access-token"]);
+    const newAccessToken = response.headers["x-access-token"];
+    if (
+      newAccessToken != null &&
+      newAccessToken != undefined &&
+      newAccessToken != ""
+    ) {
+      localStorage.setItem("token", newAccessToken);
+    }
+    return response;
+  },
+  (error) => {
+    return Promise.reject(error);
+  }
+);
+
+export default instance;

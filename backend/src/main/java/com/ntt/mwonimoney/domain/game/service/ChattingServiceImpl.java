@@ -1,3 +1,37 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:85cf0491a4f8f9ba457b628ae30bc0ef0464114c72bb039c39c2b3645f78cfdf
-size 1118
+package com.ntt.mwonimoney.domain.game.service;
+
+import com.ntt.mwonimoney.domain.game.entity.Chat;
+import com.ntt.mwonimoney.domain.game.repository.ChattingRepository;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Service;
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
+import reactor.core.scheduler.Schedulers;
+
+import java.time.LocalDateTime;
+
+@Service
+@RequiredArgsConstructor
+@Slf4j
+public class ChattingServiceImpl implements ChattingService {
+
+    private final ChattingRepository chattingRepository;
+
+    @Override
+    public Flux<Chat> getBalanceGameChattingHistory(Long balanceGameIdx) {
+        return chattingRepository.mFindByBalanceGameIdx(balanceGameIdx)
+                .subscribeOn(Schedulers.boundedElastic());
+    }
+
+    @Override
+    public Mono<Chat> addChat(Chat chat, String memberUUID, Long balanceGameIdx) {
+
+        chat.setSenderUUID(memberUUID);
+        chat.setBalanceGameIdx(balanceGameIdx);
+        chat.setCreatedTime(LocalDateTime.now());
+
+        return chattingRepository.save(chat);
+    }
+
+}

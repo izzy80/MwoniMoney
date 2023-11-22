@@ -1,3 +1,54 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e4df5da76a3806b2f9b26e52e8c759024b5a06b1f35a56d9ef6a1efc50acf464
-size 1759
+import styled from "styled-components";
+
+interface EmogiBoxProps {
+  width?: string;
+  height?: string;
+  backImg: string;
+  borderA?: string;
+}
+
+export const EmogiBox = styled.div<EmogiBoxProps>`
+  // border: 1px solid red;
+  box-sizing: border-box;
+  width: ${(props) => (props.width ? props.width : "80%")};
+  height: ${(props) => (props.height ? props.height : "80%")};
+  background-image: url(${(props) => props.backImg});
+  background-size: 100% 100%;
+  border-radius: ${(props) => props.borderA};
+`;
+
+//img (화살표, O,x답)
+interface ImgProps {
+  width?: string | null;
+  height?: string | null;
+  padding?: string | null;
+}
+export const Img = styled.img<ImgProps>`
+  width: ${(props) => (props.width ? props.width : "100%")};
+  height: ${(props) => (props.height ? props.height : "100%")};
+  padding: ${(props) => (props.padding ? props.padding : "1%")};
+  // border: 1px solid red;
+  border-radius: 50%;
+  margin-top: 5%;
+`;
+
+interface ImgBoxProps {
+  display?: string | null;
+  justifycontent?: string | null;
+  backgroundcolor?: string | null;
+  width?: string | null;
+  height?: string | null;
+  borderradius?: string | null;
+  alignitems?: string | null;
+}
+export const ImgBox = styled.div<ImgBoxProps>`
+  display: ${(props) => (props.display ? props.display : "flex")};
+  justify-content: ${(props) =>
+    props.justifycontent ? props.justifycontent : "space-evenly"};
+  background-color: ${(props) =>
+    props.backgroundcolor ? props.backgroundcolor : "transparent"};
+  width: ${(props) => (props.width ? props.width : "")};
+  height: ${(props) => (props.height ? props.height : "")};
+  border-radius: ${(props) => (props.borderradius ? props.borderradius : "")};
+  align-items: ${(props) => (props.alignitems ? props.alignitems : "")};
+`;

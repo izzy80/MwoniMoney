@@ -1,3 +1,22 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:bea0b0babcee129a6cb7f5198e6f45953ad5320653325ba4f4683cacafbabfcf
-size 831
+package com.ntt.mwonimoney.domain.account.repository;
+
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Slice;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.ntt.mwonimoney.domain.account.entity.FinAccountTransaction;
+
+import jakarta.transaction.Transactional;
+
+@Transactional
+public interface FinAccountTransactionRepository
+	extends JpaRepository<FinAccountTransaction, Long>, FinAccountTransactionRepositoryCustom {
+
+	Slice<FinAccountTransaction> findByFinAccountIdx(Long finAccountIdx, Pageable pageable);
+
+	Slice<FinAccountTransaction> findByFinAccountIdxAndMoneyGreaterThanEqual(Long finAccountIdx, int money,
+		Pageable pageable);
+
+	Slice<FinAccountTransaction> findByFinAccountIdxAndMoneyLessThanEqual(Long finAccountIdx, int money,
+		Pageable pageable);
+}

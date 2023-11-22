@@ -1,3 +1,38 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:8fa48eb228960ae8a561345aa21d6d4546dda9b9fa14eddd42f7d38f453794ef
-size 888
+import React, { useEffect } from "react";
+import ReactWordcloud from "react-wordcloud";
+import api from "../../apis/Api";
+import { useState } from "react";
+export default function WordCloud({ balanceGameIdx = 1 }) {
+  const [words, setWords] = useState([]);
+  const [flag, setFlag] = useState(0);
+
+  useEffect(() => {
+    api
+      .get(
+        `${process.env.REACT_APP_SERVER_URL}/api/v1/balances/${balanceGameIdx}/word-cloud`,
+        {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
+        }
+      )
+      .then((res) => {
+        console.log(res.data);
+        setWords(res.data);
+      });
+  }, [flag]);
+
+  setInterval(() => {
+    if (flag > 10000) {
+      setFlag(0);
+    } else {
+      setFlag(flag + 1);
+    }
+  }, 180000);
+
+  return (
+    <div>
+      <ReactWordcloud words={words} size={[600, 350]} />
+    </div>
+  );
+}

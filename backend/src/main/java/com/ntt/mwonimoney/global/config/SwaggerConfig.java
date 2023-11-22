@@ -1,3 +1,29 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7ec4eaa05294ad954d7cd30a5b556b5f2be7451d678ba398bea860f2f62b8ac3
-size 836
+package com.ntt.mwonimoney.global.config;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+import io.swagger.v3.oas.annotations.OpenAPIDefinition;
+import io.swagger.v3.oas.annotations.servers.Server;
+import io.swagger.v3.oas.models.Components;
+import io.swagger.v3.oas.models.OpenAPI;
+import io.swagger.v3.oas.models.info.Info;
+
+@Configuration
+@OpenAPIDefinition(servers = {@Server(url = "https://j9b310.p.ssafy.io", description = "Default Server Url")})
+public class SwaggerConfig {
+
+	@Bean
+	public OpenAPI openAPI() {
+		return new OpenAPI()
+			.components(new Components())
+			.info(apiInfo());
+	}
+
+	private Info apiInfo() {
+		return new Info()
+			.title("Springdoc 테스트")
+			.description("Springdoc을 사용한 Swagger UI 테스트")
+			.version("1.0.0");
+	}
+}

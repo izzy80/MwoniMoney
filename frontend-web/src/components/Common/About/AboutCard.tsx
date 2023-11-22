@@ -1,3 +1,54 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:753e2f1bd7634cccd82febdf8de47496dd1ebbadc14424def72c4c36de782eac
-size 1377
+import React from "react";
+import { TextBox } from "./AboutText";
+import { WhiteBox1 } from "./AboutWhilteContainer";
+
+interface AboutCardProps {
+  title1: string;
+  title2: string;
+  content1: string | number;
+  content2: string | number;
+  backcolor1: string;
+  backcolor2: string;
+  width: string;
+  fontweight?: string;
+  fontsize1?: string;
+  fontsize2?: string;
+}
+
+function AboutCard(props: AboutCardProps) {
+  const {
+    title1,
+    title2,
+    content1,
+    content2,
+    backcolor1,
+    backcolor2,
+    width,
+    fontsize1 = "1.2em", // 기본값을 설정해줍니다.
+    fontsize2 = "1em", // 기본값을 설정해줍니다.
+    fontweight = "normal", // 기본값을 설정해줍니다.
+  } = props;
+
+  return (
+    <>
+      <WhiteBox1 width={width} backcolor={backcolor1} flexDirection="column">
+        <TextBox fontF="TheJamsil7Bold" fontSize={fontsize1}>
+          {title1}
+        </TextBox>
+        <TextBox fontSize={fontsize2} fontWeight={fontweight}>
+          {content1}
+        </TextBox>
+      </WhiteBox1>
+      <WhiteBox1 width={width} backcolor={backcolor2} flexDirection="column">
+        <TextBox fontF="TheJamsil7Bold" fontSize={fontsize1}>
+          {title2}
+        </TextBox>
+        <TextBox fontSize={fontsize2} fontWeight={fontweight}>
+          {content2}
+        </TextBox>
+      </WhiteBox1>
+    </>
+  );
+}
+
+export default AboutCard;

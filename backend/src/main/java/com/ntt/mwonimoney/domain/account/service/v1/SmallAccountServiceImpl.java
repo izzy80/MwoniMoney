@@ -1,3 +1,35 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d5222457810247f823ae0e8d8b993831e513b30e8c9a46fdd0fbb24644a6f734
-size 1113
+package com.ntt.mwonimoney.domain.account.service.v1;
+
+import org.springframework.context.annotation.Primary;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.ntt.mwonimoney.domain.account.entity.FinAccount;
+import com.ntt.mwonimoney.domain.account.entity.FinAccountStatus;
+import com.ntt.mwonimoney.domain.account.repository.FinAccountRepository;
+import com.ntt.mwonimoney.domain.account.service.SmallAccountService;
+import com.ntt.mwonimoney.domain.member.model.vo.SmallAccount;
+
+import lombok.RequiredArgsConstructor;
+
+@Service
+@RequiredArgsConstructor
+@Primary
+@Transactional
+public class SmallAccountServiceImpl implements SmallAccountService {
+
+	private final FinAccountRepository finAccountRepository;
+
+	@Override
+	public void closeSmallAccount(Long smallAccountIdx) {
+
+		FinAccount smallAccountToUpdate = finAccountRepository.findById(smallAccountIdx).orElseThrow();
+		smallAccountToUpdate.changeStatus(FinAccountStatus.DEACTIVATE);
+
+	}
+
+	@Override
+	public void openSmallAccount(Long memberIdx, SmallAccount smallAccount) {
+	}
+
+}

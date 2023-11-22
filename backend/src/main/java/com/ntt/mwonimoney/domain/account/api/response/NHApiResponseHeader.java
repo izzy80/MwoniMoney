@@ -1,3 +1,33 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:2dd1546e81c5b0086b518480563efc66301d4ffc7e8c944f5ad3beffbcbfef2c
-size 874
+package com.ntt.mwonimoney.domain.account.api.response;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.persistence.JoinColumn;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
+@Data
+@NoArgsConstructor
+public class NHApiResponseHeader {
+    @JsonProperty("ApiNm")
+    private String ApiNm;
+    @JsonProperty("Tsymd")
+    private String Tsymd; // YYYYMMDD
+    @JsonProperty("Trtm")
+    private String Trtm; // HHMMSS
+    @JsonProperty("Iscd")
+    private String Iscd;
+    @JsonProperty("FintechApsno")
+    private String FintechApsno;
+    @JsonProperty("APISvcCd")
+    private String APISvcCd;
+    @JsonProperty("Istuno")
+    private String Istuno;
+    @JsonProperty("Rpcd")
+    private String Rpcd;
+    @JsonProperty("Rsms")
+    private String Rsms;
+}

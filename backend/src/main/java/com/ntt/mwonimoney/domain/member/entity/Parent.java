@@ -1,3 +1,42 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:864b0c9621d9d2707940876a40a14c5bd21b1de687b4a4f10c341e683264d900
-size 1356
+package com.ntt.mwonimoney.domain.member.entity;
+
+import com.ntt.mwonimoney.domain.member.model.dto.ParentDto;
+import com.ntt.mwonimoney.domain.member.model.vo.MemberRole;
+import com.ntt.mwonimoney.domain.member.model.vo.SocialProvider;
+
+import jakarta.persistence.Entity;
+import lombok.AccessLevel;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+@Entity
+@Getter
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+public class Parent extends Member {
+
+	@Builder
+	public Parent(int status, String uuid, String name, String nickname, String birthday, SocialProvider socialProvider,
+		String socialId, String email, String challengeAlarm, String balanceAlarm,
+		String smallAcountAlarm) {
+		super(status, uuid, name, nickname, birthday, socialProvider, socialId, email, MemberRole.PARENT,
+			challengeAlarm, balanceAlarm, smallAcountAlarm);
+	}
+
+	@Override
+	public ParentDto convertToDto() {
+		return ParentDto.builder()
+			.uuid(this.getUuid())
+			.status(this.getStatus())
+			.name(this.getName())
+			.nickname(this.getNickname())
+			.birthday(this.getBirthday())
+			.socialProvider(this.getSocialProvider())
+			.memberRole(this.getMemberRole())
+			.challengeAlarm(this.getChallengeAlarm())
+			.balanceAlarm(this.getBalanceAlarm())
+			.smallAcountAlarm(this.getSmallAcountAlarm())
+			.email(this.getEmail())
+			.build();
+	}
+}

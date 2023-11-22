@@ -1,3 +1,26 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:da356602a40a3545cd7749e704b7baf34c4df1aba48e894ce510cd63d300de03
-size 826
+package com.ntt.mwonimoney.domain.challenge.service;
+
+import java.util.List;
+
+import com.ntt.mwonimoney.domain.challenge.api.request.ChallengeRequestDto;
+import com.ntt.mwonimoney.domain.challenge.api.response.MemberChallengeResponseDto;
+
+public interface ChallengeService {
+
+	MemberChallengeResponseDto writeChallenge(ChallengeRequestDto challengeRequestDto, Long childIdx);
+
+	void deleteChallenge(Long memberChallengeIdx);
+
+	void completeChallenge(Long memberChallengeIdx);
+
+	void rejectChallenge(Long memberChallengeIdx);
+
+	void acceptChallenge(Long memberChallengeIdx);
+
+	MemberChallengeResponseDto proposeChallenge(ChallengeRequestDto challengeRequestDto, Long childIdx);
+
+	void proposeAcceptChallenge(Long memberChallengeIdx);
+
+	List<MemberChallengeResponseDto> selectMemberChallenge(Integer status, Long memberIdx);
+
+}

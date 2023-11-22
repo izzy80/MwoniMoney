@@ -1,3 +1,33 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c3f8e545922c4092b8e7d54a8eb6340d69fe10912ca9acf812397ff0f92be8e1
-size 754
+package com.ntt.mwonimoney.domain.challenge.entity;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+@Entity
+@NoArgsConstructor
+@Getter
+public class Challenge {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "challenge_idx")
+	private Integer challengeIdx;
+
+	@Column(name = "challenge_title")
+	private String title;
+
+	@Column(name = "challenge_category")
+	private String category;
+
+	//생성자
+	@Builder
+	public Challenge(String title, String category) {
+		this.title = title;
+		this.category = category;
+	}
+}

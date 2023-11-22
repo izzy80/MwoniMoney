@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:52e0790073040015aea2b461a9efd14bf09f05311d64e4ed0da7ef29c8ea2587
-size 659
+package com.ntt.mwonimoney.domain.account.repository;
+
+import java.util.List;
+
+import com.ntt.mwonimoney.domain.account.entity.FinAccountTransaction;
+import com.ntt.mwonimoney.domain.account.model.dto.FinAccountTransactionDto;
+import com.ntt.mwonimoney.domain.account.model.dto.GetTransactionResponseDto;
+import com.ntt.mwonimoney.domain.account.model.dtoV2.GetTransactionRequestDto;
+
+public interface FinAccountTransactionRepositoryCustom {
+	List<FinAccountTransactionDto> findFinAccountTransactionByFinAccountIdx(Long finAccountIdx);
+
+
+	public List<FinAccountTransaction> getTransaction(Long memberIdx, GetTransactionRequestDto getTransactionRequestDto);
+}

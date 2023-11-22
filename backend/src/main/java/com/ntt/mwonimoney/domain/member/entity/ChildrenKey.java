@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:810f56b1a3c615500f6089ef3f4f3648a46aa3adc33d10f2e67ef17507d928db
-size 543
+package com.ntt.mwonimoney.domain.member.entity;
+
+import java.io.Serializable;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Embeddable;
+import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+@Getter
+@Embeddable
+@AllArgsConstructor
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+public class ChildrenKey implements Serializable {
+
+	@Column(name = "pk_parent_uuid")
+	private String parentUUID;
+
+	@Column(name = "pk_children_uuid")
+	private String childUUID;
+
+}

@@ -1,3 +1,48 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:41783c4856f81fa9ef0d61b0c193cb2ac9724aa0523745212c9d9bdeaac360a2
-size 1093
+import React from "react";
+import styled from "styled-components";
+
+/*글 상자 */
+
+const TextContainer = styled.div`
+  // border: 1px solid black;
+  box-sizing: border-box;
+  width: 100%;
+  height: 25%;
+  padding-left: 5%;
+  display: flex; /* 수직축 가운데 정렬을 위해 추가 */
+  flex-direction: column;
+  align-items: center; /* 수직축 가운데 정렬을 위해 추가 */
+`;
+
+const TextBox1 = styled.div`
+  // border: 1px solid black;
+  width: 100%;
+  height: 65%;
+  font-size: 1.7em;
+  font-weight: bold;
+  display: flex; /* 내부 텍스트를 수직축 가운데 정렬을 위해 추가 */
+  align-items: center; /* 내부 텍스트를 수직축 가운데 정렬을 위해 추가 */
+`;
+
+const TextBox2 = styled.div`
+  // border: 1px solid black;
+  width: 100%;
+  height: 35%;
+  font-size: 1em;
+`;
+
+interface TextProps {
+  text1: string;
+  text2: string;
+}
+
+function AllowanceText({ text1, text2 }: TextProps) {
+  return (
+    <TextContainer>
+      <TextBox1>{text1}</TextBox1>
+      <TextBox2>{text2}</TextBox2>
+    </TextContainer>
+  );
+}
+
+export default AllowanceText;

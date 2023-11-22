@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9a1ece4840548e5fad8d8ac759855ef1869f3d66f54b92abdb02841d1e93b229
-size 659
+package com.ntt.mwonimoney.domain.account.service;
+
+import java.util.Optional;
+
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Slice;
+
+import com.ntt.mwonimoney.domain.account.entity.FinAccountTransaction;
+
+public interface FinAccountTransactionalService {
+
+	public Slice<FinAccountTransaction> getTransactionList(Long finAccountIdx, Pageable pageable);
+
+	public Optional<FinAccountTransaction> getTransaction(Long finAccountTransactionId);
+
+	public FinAccountTransaction makeTransaction(FinAccountTransaction finAccountTransaction);
+
+	public void editMemo(FinAccountTransaction finAccountTransaction, String memo);
+}

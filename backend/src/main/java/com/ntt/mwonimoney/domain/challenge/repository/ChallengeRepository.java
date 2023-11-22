@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:6fa8014bef9719d956ff2db9da668ee67cc801b0a27451ac3a2a453c54d7f067
-size 631
+package com.ntt.mwonimoney.domain.challenge.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
+
+import com.ntt.mwonimoney.domain.challenge.entity.Challenge;
+
+public interface ChallengeRepository extends JpaRepository<Challenge, Integer> {
+	// client에서 title과 category를 받아와서 해당 challenge를 return
+	@Query("select c from Challenge c where c.title = :title and c.category = :category")
+	Challenge findChallenge(@Param("title") String title, @Param("category") String category);
+}

@@ -1,3 +1,23 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b03008aea3e4fc3e3c469c3a36b6ecf038f1bb84f9cf7c5430ef2896783dcd58
-size 547
+package com.ntt.mwonimoney.domain.game.entity;
+
+import java.io.Serializable;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Embeddable;
+import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+@Embeddable
+@Getter
+@AllArgsConstructor
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+public class BalanceGameHistoryKey implements Serializable {
+
+	@Column(name = "pk_balance_idx")
+	private Long BalanceGameIdx;
+
+	@Column(name = "pk_member_idx")
+	private Long memberIdx;
+}

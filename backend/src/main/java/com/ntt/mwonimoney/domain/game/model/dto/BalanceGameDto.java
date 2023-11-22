@@ -1,3 +1,31 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9ec5a9ec4ca9de94675ecfa289e8cb766bdaea6aa6959de775f64839649e48a3
-size 559
+package com.ntt.mwonimoney.domain.game.model.dto;
+
+import com.ntt.mwonimoney.domain.game.model.vo.BalanceGameStatus;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+public class BalanceGameDto {
+
+	private Long idx;
+
+	private String news;
+	
+	private String question;
+
+	private String leftAnswer;
+
+	private String rightAnswer;
+
+	private BalanceGameStatus balanceGameStatus;
+
+	private int countOfLeftAnswer;
+
+	private int countOfRightAnswer;
+}

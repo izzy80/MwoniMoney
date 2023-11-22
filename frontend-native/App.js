@@ -1,3 +1,32 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:db0f30232822476c851d77bc072dd3e83abc2e07a07f01060f0461f38ef8d9a5
-size 849
+import React from 'react';
+import {SafeAreaView, StatusBar, View, StyleSheet} from 'react-native';
+import {WebView} from 'react-native-webview';
+
+const App = () => {
+  return (
+    <View style={styles.container}>
+      <StatusBar barStyle="dark-content" />
+      <SafeAreaView style={styles.safeAreaView}>
+        <WebView
+          source={{uri: 'https://j9b310.p.ssafy.io/'}} // 웹 페이지 주소를 지정합니다.
+          style={styles.webview}
+        />
+      </SafeAreaView>
+    </View>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#ffffff', // 원하는 배경 색상으로 변경할 수 있습니다.
+  },
+  safeAreaView: {
+    flex: 1,
+  },
+  webview: {
+    flex: 1, // WebView가 SafeAreaView 내에서 전체 화면을 차지하도록 설정합니다.
+  },
+});
+
+export default App;

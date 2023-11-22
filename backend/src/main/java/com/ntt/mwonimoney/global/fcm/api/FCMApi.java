@@ -1,3 +1,28 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:8334a7d72338d7790006d9c3a8302d45ce36ff3fe0eed4d29942c5c1fffacb30
-size 949
+package com.ntt.mwonimoney.global.fcm.api;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.ntt.mwonimoney.global.fcm.api.request.FCMTokenRequest;
+import com.ntt.mwonimoney.global.fcm.service.FCMServiceImpl;
+
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
+@RestController
+@RequestMapping("/api/v1")
+@RequiredArgsConstructor
+public class FCMApi {
+	private final FCMServiceImpl fcmServiceImpl;
+
+	@PutMapping("/fcm")
+	public ResponseEntity<?> updateFCMToken(@RequestBody FCMTokenRequest fcmTokenRequest) {
+		log.info("test : {} ", fcmTokenRequest.getFirebaseToken());
+		fcmServiceImpl.updateFCMToken(fcmTokenRequest);
+		return ResponseEntity.ok().build();
+	}
+}

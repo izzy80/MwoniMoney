@@ -1,3 +1,29 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5912a650c7107b013fc09c56c6fe57d6f2281bd42efb3e3887973ade4a2c0a72
-size 440
+// custom.d.ts
+
+// PNG 이미지
+declare module "*.png" {
+  const value: string;
+  export default value;
+}
+
+// JPEG 이미지
+declare module "*.jpg" {
+  const value: string;
+  export default value;
+}
+
+// GIF 이미지
+declare module "*.gif" {
+  const value: string;
+  export default value;
+}
+
+// SVG 이미지
+declare module "*.svg" {
+  const value: string;
+  export default value;
+}
+
+declare interface Window {
+  ReactNativeWebView: any;
+}

@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d423cf399ce14b500ea459aea04ee9661c9a199f5941c21bc24cd3a3ac21c4a9
-size 544
+package com.ntt.mwonimoney.domain.game.repository;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.ntt.mwonimoney.domain.game.entity.BalanceGame;
+import com.ntt.mwonimoney.domain.game.model.vo.BalanceGameStatus;
+
+public interface BalanceGameRepository extends JpaRepository<BalanceGame, Long>, CustomBalanceGameRepository {
+
+	Optional<BalanceGame> findBalanceGameByIdx(Long idx);
+
+	List<BalanceGame> findBalanceGamesByBalanceGameStatus(BalanceGameStatus status);
+
+}

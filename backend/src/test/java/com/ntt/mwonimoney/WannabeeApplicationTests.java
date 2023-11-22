@@ -1,3 +1,28 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:90ebdbae55800d885d2bcfdcf05092ac1c804abbd9d97764ee7c9f8385e0316b
-size 628
+package com.ntt.mwonimoney;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.web.client.RestTemplate;
+
+import com.ntt.mwonimoney.domain.account.service.NHApiService;
+import com.ntt.mwonimoney.domain.account.service.v1.FinAccountServiceImpl;
+
+@SpringBootTest
+class WannabeeApplicationTests {
+
+	@Autowired
+	private RestTemplate restTemplate;
+
+	@Autowired
+	private NHApiService nhApiService;
+
+	@Autowired
+	private FinAccountServiceImpl finAccountService;
+
+	@Test
+	void contextLoads() {
+
+	}
+
+}

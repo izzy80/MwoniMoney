@@ -1,3 +1,20 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ec8e58cda8f5f1c747f7bd3798574ef984bc47d204ea983ebc83a0cd5d2ec123
-size 570
+package com.ntt.mwonimoney.domain.member.repository;
+
+import java.util.Optional;
+
+import com.ntt.mwonimoney.domain.member.entity.Member;
+import com.ntt.mwonimoney.domain.member.model.vo.MemberRole;
+
+public interface CustomMemberRepository {
+
+	Optional<? extends Member> findMemberByIdx(Long memberIdx);
+
+	Optional<? extends Member> findMemberByUuid(String memberUUID);
+
+	Optional<? extends Member> findMemberBySocialId(String socialId);
+
+	Optional<Member> changeAndSaveMemberRole(Long memberIdx, MemberRole memberRole);
+
+	Long findMemberIdxByUuid(String memberUUID);
+}
+

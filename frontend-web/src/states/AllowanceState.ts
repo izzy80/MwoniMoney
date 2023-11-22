@@ -1,3 +1,23 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7e0f09e728656c08eab7021053ec77a2e353b71c1f209ded4ea1fc6603bf17ee
-size 433
+import { atom } from "recoil";
+
+//정기용돈
+export const allowanceMoney = atom<number>({
+  key: "allowance_money",
+  default: 0,
+});
+
+export const isAllowanceMoney = atom<boolean>({
+  key: "is_allowance_money",
+  default: false,
+});
+
+//특별용돈
+export const specialMoney = atom<number>({
+  key: "special_money",
+  default: 0,
+});
+
+export const isSpecialMoney = atom<boolean>({
+  key: "is_special_money",
+  default: false,
+});

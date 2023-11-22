@@ -1,3 +1,113 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:2218a891006be9232f405d610d2428b19b5266100e647239d669be48bc7d8d22
-size 3056
+import React, { useEffect, useState } from "react";
+import { Container } from "../About/AboutContainer";
+import { InputBox, TextBox } from "../About/AboutText";
+import { useRecoilState, useSetRecoilState } from "recoil";
+import { userCheckState, userDataState } from "../../../states/UserInfoState";
+import api from "../../../apis/Api";
+
+// 입력칸
+interface InputImfoProps {
+  title: string;
+  info: string;
+  placeholder: string;
+  id: string;
+}
+
+function InputInfo({ title, info, placeholder, id }: InputImfoProps) {
+  const [userData, setUserData] = useRecoilState(userDataState);
+  const setUserCheck = useSetRecoilState(userCheckState);
+  const [inputValue, setInputValue] = useState("");
+
+  //member를 get해서 status? 값으로 정보 받았는지 확인하기
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await api.get("v1/members", {});
+        const receivedData = response.data;
+        setUserData((prev) => ({
+          ...prev,
+          status: receivedData.member_status,
+          name: receivedData.name,
+          email: receivedData.email,
+          birthday: receivedData.birthday,
+        }));
+      } catch (error) {
+        console.error(error);
+      }
+    };
+    fetchData();
+  }, []);
+  const status = userData.status;
+
+  const handleInputChange = (e: any) => {
+    setInputValue(e.target.value);
+  };
+
+  const handleButtonClick = () => {
+    setUserData((userData: any) => ({
+      ...userData,
+      [id]: inputValue,
+    }));
+    setUserCheck((prevUserCheck) => ({
+      ...prevUserCheck,
+      [`${id}Check`]: true,
+    }));
+  };
+  return (
+    <>
+      <Container height="30%">
+        <TextBox marginL="3%" fontSize="1.5em" height="100%">
+          {title}
+        </TextBox>
+      </Container>
+      <Container
+        flexDirection="column"
+        height="75%"
+        justifyContent="center"
+        align="center"
+      >
+        {status == 0 ? (
+          <TextBox
+            height="40%"
+            width="93%"
+            fontSize="1em"
+            fontWeight="normal"
+            marginL="0%"
+            style={{ borderBottom: "1px solid black" }}
+          >
+            <Container height="100%" width="80%">
+              <InputBox
+                height="100%"
+                width="100%"
+                fontsize="1.4em"
+                placeholder={placeholder}
+                id={id}
+                onChange={handleInputChange}
+              />
+            </Container>
+            <Container
+              height="100%"
+              width="20%"
+              backcolor="#fbd56e"
+              onClick={handleButtonClick}
+            >
+              추가
+            </Container>
+          </TextBox>
+        ) : (
+          <TextBox
+            height="30%"
+            width="93%"
+            fontSize="1em"
+            fontWeight="normal"
+            marginL="0%"
+            style={{ borderBottom: "1px solid black" }}
+          >
+            {info}
+          </TextBox>
+        )}
+      </Container>
+    </>
+  );
+}
+export default InputInfo;
